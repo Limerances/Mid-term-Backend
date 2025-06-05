@@ -1,0 +1,296 @@
+argc: 5
+argv[0]: ./test_simulator_testsuit
+argv[1]: -A
+argv[2]: DELTA_PR
+argv[3]: -D
+argv[4]: ../data/PR/web-Google/
+V_RW_SPM: total has 6 phy SPM, total addr width 25 bits, each phy spm addr width 22 bits
+V_SPM_SINGLE, contains simd 64 blocks, each addr width: 16
+V_SPM_SINGLE, contains simd 64 blocks, each addr width: 16
+V_SPM_SINGLE, contains simd 64 blocks, each addr width: 16
+V_SPM_SINGLE, contains simd 64 blocks, each addr width: 16
+V_SPM_SINGLE, contains simd 64 blocks, each addr width: 16
+V_SPM_SINGLE, contains simd 64 blocks, each addr width: 16
+[ASE]: mapped dsm ptr:0x7ff101882000, succeeded!
+[ASE]: start simulatoin loop, max cycles per turn: 1410065408
+clk: 0, flush_stage=0, scheduler_in_v_task=0, scheduler_send_e_task=0, M09_write_to_spm=0, M09_write_to_id_fifo=0, M09_write_to_data_fifo=0, M09_alu_in_num=0, M09_alu_out_num=0, M09_update_dst_read_single_get_task_num=0, M09_update_dst_read_single_send_task_num=0, M09_update_dst_read_single_read_spm_num=0, M09_update_dst_read_single_get_spm_data_num=0
+clk: 0, M08_combiner_rv_ct=0, M08_combiner_send_ct=0
+0
+m02_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m03_v_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m03_e_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m04_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m05_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m06_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m07_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m08_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m09_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+clk: 1, rd_active_vertex: change empty, front=0, now=1
+clk: 1, rd_active_vertex: change empty, front=0, now=1
+[ASE_dev]: trigger ase event: 4
+Load graph, v=916428, e=5105040
+iter=1, active_vtx=916428, active_edge=5105040
+0.955419
+iter=2, active_vtx=902799, active_edge=5039034
+0.37402
+iter=3, active_vtx=695942, active_edge=4202030
+0.16609
+iter=4, active_vtx=629440, active_edge=3950960
+0.0853042
+iter=5, active_vtx=575821, active_edge=3686545
+0.0505719
+iter=6, active_vtx=519584, active_edge=3354567
+0.0337857
+iter=7, active_vtx=441246, active_edge=2948692
+0.0240135
+iter=8, active_vtx=374173, active_edge=2522359
+0.0175964
+iter=9, active_vtx=287305, active_edge=2027732
+0.0130113
+iter=10, active_vtx=211890, active_edge=1458973
+0.00948213
+iter=11, active_vtx=124505, active_edge=806392
+0.00666302
+iter=12, active_vtx=61498, active_edge=252479
+0.0045794
+iter=13, active_vtx=37896, active_edge=114658
+0.00346015
+iter=14, active_vtx=31900, active_edge=76646
+0.00275363
+iter=15, active_vtx=25862, active_edge=61205
+0.00222764
+iter=16, active_vtx=23541, active_edge=50542
+0.00181347
+iter=17, active_vtx=20258, active_edge=43738
+0.0014824
+iter=18, active_vtx=18462, active_edge=38320
+0.00121275
+iter=19, active_vtx=16218, active_edge=33727
+0.000993024
+iter=20, active_vtx=14955, active_edge=29630
+0.00081326
+iter=21, active_vtx=12955, active_edge=25672
+0.000667146
+iter=22, active_vtx=11706, active_edge=22495
+0.000544595
+iter=23, active_vtx=10291, active_edge=19359
+0.000444583
+iter=24, active_vtx=9142, active_edge=17091
+0.000359411
+iter=25, active_vtx=8195, active_edge=15273
+0.000288766
+iter=26, active_vtx=7277, active_edge=13294
+0.0002329
+iter=27, active_vtx=6291, active_edge=11596
+0.00018625
+iter=28, active_vtx=5315, active_edge=10119
+0.000145522
+iter=29, active_vtx=4192, active_edge=7847
+0.000109654
+iter=30, active_vtx=3028, active_edge=5741
+7.77163e-05
+iter=31, active_vtx=2135, active_edge=4027
+5.25382e-05
+iter=32, active_vtx=1091, active_edge=2392
+3.13273e-05
+iter=33, active_vtx=185, active_edge=677
+1.34613e-05
+iter=34, active_vtx=19, active_edge=21
+3.27148e-06
+iter=35, active_vtx=5, active_edge=5
+7.9516e-07
+iter=36, active_vtx=2, active_edge=2
+3.18106e-07
+iter=37, active_vtx=0, active_edge=0
+0
+PR Push complete iteration: 37
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+Empty line @ 17
+1 scalar
+1 scalar
+1 scalar
+Empty line @ 21
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+Empty line @ 27
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+Empty line @ 39
+1 vector
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 vector
+1 vector
+1 vector
+1 vector
+1 vector
+1 vector
+1 vector
+1 vector
+1 vector
+1 vector
+1 vector
+1 vector
+1 vector
+1 vector
+1 scalar
+1 scalar
+1 scalar
+clk: 519672, inst_decoder_v_single: get and send queue_inst, I-type=1, exer_id=0, imm=8388608, func=34, fi_reg_id4: 0, fi_reg_id3: 6, fi_reg_id2: 0, fi_reg_id1: 18
+clk: 519673, inst_decoder_v_single: get and send SP_inst, I-type=6, imm=8388608, func=32, fi_reg_r1: 0, fi_reg_r2: 0, fi_reg_r3: 0, fi_reg_r4: 0
+clk: 519674, inst_decoder_v_single: get and send SP_inst, I-type=6, imm=12582912, func=33, fi_reg_r1: 0, fi_reg_r2: 0, fi_reg_r3: 0, fi_reg_r4: 0
+clk: 519674, issue_exer_single: get instruction, exer_id=2, func=34, qreg=(18, 0, 6, 0), vreg=(0, 0, 0, 0), sreg=(0, 0, 0, 0), i=0
+clk: 519674, issue_exer: send instruction, exer_id=2, func=34, qreg=(18, 0, 6, 0), vreg=(0, 0, 0, 0), sreg=(0, 0, 0, 0)
+clk: 519674, issue_top: send queue instruction, exer_id: 2, func=34, qreg=(18, 0, 6, 0), qvalid=(1, 0, 1, 0), sreg=(0, 0, 0, 0), imm=8388608
+clk: 519675, inst_decoder_v_single: get and send queue_inst, I-type=10, exer_id=19, imm=0, func=0, fi_reg_id4: 17, fi_reg_id3: 18, fi_reg_id2: 0, fi_reg_id1: 19
+clk: 519675, issue_exer_single: get instruction, exer_id=12, func=32, qreg=(0, 0, 0, 0), vreg=(0, 0, 0, 0), sreg=(0, 0, 0, 0), i=0
+clk: 519675, issue_exer: send instruction, exer_id=12, func=32, qreg=(0, 0, 0, 0), vreg=(0, 0, 0, 0), sreg=(0, 0, 0, 0)
+clk: 519675, issue_top: send SP instruction, exer_id: 12, func: 32, imm: 8388608
+clk: 519676, inst_decoder_v_single: get and send queue_inst, I-type=5, exer_id=13, imm=1062836634, func=32, fi_reg_id4: 0, fi_reg_id3: 19, fi_reg_id2: 0, fi_reg_id1: 20
+clk: 519677, inst_decoder_v_single: get and send queue_inst, I-type=13, exer_id=29, imm=0, func=1, fi_reg_id4: 0, fi_reg_id3: 20, fi_reg_id2: 0, fi_reg_id1: 29
+clk: 519677, graph_top: write config reg, id=0, data=8388608
+clk: 519678, inst_decoder_v_single: get and send SP_inst, I-type=6, imm=0, func=34, fi_reg_r1: 0, fi_reg_r2: 0, fi_reg_r3: 0, fi_reg_r4: 0
+clk: 519678, spec_commit: change grun to gcfg
+clk: 519680, issue_exer_single: get instruction, exer_id=12, func=33, qreg=(0, 0, 0, 0), vreg=(0, 0, 0, 0), sreg=(0, 0, 0, 0), i=0
+clk: 519680, issue_exer: send instruction, exer_id=12, func=33, qreg=(0, 0, 0, 0), vreg=(0, 0, 0, 0), sreg=(0, 0, 0, 0)
+clk: 519680, issue_top: send SP instruction, exer_id: 12, func: 33, imm: 12582912
+clk: 519681, issue_exer_single: get instruction, exer_id=19, func=0, qreg=(19, 0, 18, 17), vreg=(0, 0, 0, 0), sreg=(0, 0, 0, 0), i=0
+clk: 519681, issue_exer: send instruction, exer_id=19, func=0, qreg=(19, 0, 18, 17), vreg=(0, 0, 0, 0), sreg=(0, 0, 0, 0)
+clk: 519681, issue_top: send queue instruction, exer_id: 19, func=0, qreg=(19, 0, 18, 17), qvalid=(1, 0, 1, 1), sreg=(0, 0, 0, 0), imm=0
+clk: 519682, issue_exer_single: get instruction, exer_id=13, func=32, qreg=(20, 0, 19, 0), vreg=(0, 0, 0, 0), sreg=(0, 0, 0, 0), i=0
+clk: 519682, issue_exer: send instruction, exer_id=13, func=32, qreg=(20, 0, 19, 0), vreg=(0, 0, 0, 0), sreg=(0, 0, 0, 0)
+clk: 519682, issue_top: send queue instruction, exer_id: 13, func=32, qreg=(20, 0, 19, 0), qvalid=(1, 0, 1, 0), sreg=(0, 0, 0, 0), imm=1062836634
+clk: 519682, graph_top: write config reg, id=1, data=12582912
+clk: 519683, issue_exer_single: get instruction, exer_id=32, func=1, qreg=(29, 0, 20, 0), vreg=(0, 0, 0, 0), sreg=(0, 0, 0, 0), i=0
+clk: 519683, issue_exer: send instruction, exer_id=32, func=1, qreg=(29, 0, 20, 0), vreg=(0, 0, 0, 0), sreg=(0, 0, 0, 0)
+clk: 519683, issue_top: send queue instruction, exer_id: 32, func=1, qreg=(29, 0, 20, 0), qvalid=(1, 0, 1, 0), sreg=(0, 0, 0, 0), imm=0
+clk: 519683, spec_commit: change grun to gcfg
+clk: 519684, inst_decoder_v_single: get and send SP_inst, I-type=6, imm=0, func=35, fi_reg_r1: 0, fi_reg_r2: 0, fi_reg_r3: 0, fi_reg_r4: 0
+clk: 519685, inst_decoder_v_single: get and send SP_inst, I-type=6, imm=0, func=36, fi_reg_r1: 0, fi_reg_r2: 0, fi_reg_r3: 0, fi_reg_r4: 0
+clk: 519685, issue_exer_single: get instruction, exer_id=12, func=34, qreg=(0, 0, 0, 0), vreg=(0, 0, 0, 0), sreg=(0, 0, 0, 0), i=0
+clk: 519685, issue_exer: send instruction, exer_id=12, func=34, qreg=(0, 0, 0, 0), vreg=(0, 0, 0, 0), sreg=(0, 0, 0, 0)
+clk: 519685, issue_top: send SP instruction, exer_id: 12, func: 34, imm: 0
+clk: 519686, inst_decoder_v_single: get and send SP_inst, I-type=6, imm=2, func=37, fi_reg_r1: 0, fi_reg_r2: 0, fi_reg_r3: 0, fi_reg_r4: 0
+clk: 519687, inst_decoder_v_single: get and send SP_inst, I-type=6, imm=2, func=38, fi_reg_r1: 0, fi_reg_r2: 0, fi_reg_r3: 0, fi_reg_r4: 0
+clk: 519687, graph_top: write config reg, id=2, data=0
+clk: 519688, inst_decoder_v_single: get and send SP_inst, I-type=6, imm=0, func=7, fi_reg_r1: 0, fi_reg_r2: 0, fi_reg_r3: 6, fi_reg_r4: 0
+clk: 519688, spec_commit: change grun to gcfg
+clk: 519690, issue_exer_single: get instruction, exer_id=12, func=35, qreg=(0, 0, 0, 0), vreg=(0, 0, 0, 0), sreg=(0, 0, 0, 0), i=0
+clk: 519690, issue_exer: send instruction, exer_id=12, func=35, qreg=(0, 0, 0, 0), vreg=(0, 0, 0, 0), sreg=(0, 0, 0, 0)
+clk: 519690, issue_top: send SP instruction, exer_id: 12, func: 35, imm: 0
+clk: 519692, graph_top: write config reg, id=3, data=0
+m02_full: 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 0 0 1
+m03_v_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m03_e_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m04_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m05_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m06_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m07_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m08_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m09_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+clk: 530000, flush_stage=0, scheduler_in_v_task=0, scheduler_send_e_task=473597, M09_write_to_spm=460827, M09_write_to_id_fifo=0, M09_write_to_data_fifo=0, M09_alu_in_num=461049, M09_alu_out_num=460872, M09_update_dst_read_single_get_task_num=461336, M09_update_dst_read_single_send_task_num=461091, M09_update_dst_read_single_read_spm_num=461286, M09_update_dst_read_single_get_spm_data_num=461134
+clk: 530000, M08_combiner_rv_ct=471824, M08_combiner_send_ct=461382
+36968
+m02_full: 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1
+m03_v_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m03_e_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m04_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m05_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m06_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m07_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m08_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m09_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+clk: 540000, flush_stage=0, scheduler_in_v_task=0, scheduler_send_e_task=935636, M09_write_to_spm=913296, M09_write_to_id_fifo=0, M09_write_to_data_fifo=0, M09_alu_in_num=913544, M09_alu_out_num=913352, M09_update_dst_read_single_get_task_num=913831, M09_update_dst_read_single_send_task_num=913588, M09_update_dst_read_single_read_spm_num=913783, M09_update_dst_read_single_get_spm_data_num=913629
+clk: 540000, M08_combiner_rv_ct=933787, M08_combiner_send_ct=913881
+36989
+clk: 1847818, wr dram addr: 0xf7e880, 16246912, data: [0.000000 0.000002 0.000003 0.000000 0.000000 0.000038 0.000000 0.000001 0.000000 0.000001 0.000001 0.000001 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1847819, wr dram addr: 0xf7e8c0, 16246976, data: [0.000002 0.000016 0.000002 0.000001 0.000001 0.000001 0.000000 0.000001 0.000008 0.000000 0.000000 0.000000 0.000000 0.000000 0.000002 0.000000 ]
+clk: 1847820, wr dram addr: 0xf7e900, 16247040, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000002 0.000000 0.000001 0.000000 0.000001 0.000000 0.000001 0.000012 0.000012 ]
+clk: 1847821, wr dram addr: 0xf7e940, 16247104, data: [0.000001 0.000000 0.000001 0.000002 0.000000 0.000001 0.000000 0.000013 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000017 ]
+clk: 1847822, wr dram addr: 0xf7e980, 16247168, data: [0.000000 0.000000 0.000000 0.000000 0.000031 0.000000 0.000003 0.000000 0.000000 0.000000 0.000000 0.000015 0.000000 0.000000 0.000001 0.000000 ]
+clk: 1847823, wr dram addr: 0xf7e9c0, 16247232, data: [0.000001 0.000001 0.000000 0.000001 0.000001 0.000001 0.000000 0.000001 0.000000 0.000000 0.000000 0.000000 0.000001 0.000002 0.000000 0.000001 ]
+clk: 1847824, wr dram addr: 0xf7ea00, 16247296, data: [0.000002 0.000001 0.000000 0.000000 0.000001 0.000000 0.000000 0.000000 0.000000 0.000000 0.000001 0.000000 0.000000 0.000031 0.000000 0.000005 ]
+clk: 1847825, wr dram addr: 0xf7ea40, 16247360, data: [0.000000 0.000000 0.000000 0.000003 0.000000 0.000001 0.000000 0.000000 0.000001 0.000000 0.000000 0.000000 0.000000 0.000000 0.000001 0.000006 ]
+clk: 1847826, wr dram addr: 0xf7ea80, 16247424, data: [0.000001 0.000001 0.000000 0.000000 0.000001 0.000008 0.000000 0.000000 0.000000 0.000000 0.000001 0.000000 0.000000 0.000001 0.000002 0.000000 ]
+clk: 1847827, wr dram addr: 0xf7eac0, 16247488, data: [0.000005 0.000000 0.000050 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000001 0.000000 0.000001 0.000000 0.000001 0.000006 0.000000 ]
+clk: 1847828, wr dram addr: 0xf7eb00, 16247552, data: [0.000000 0.000002 0.000000 0.000000 0.000000 0.000000 0.000000 0.000001 0.000000 0.000000 0.000000 0.000001 0.000000 0.000000 0.000002 0.000000 ]
+clk: 1847829, wr dram addr: 0xf7eb40, 16247616, data: [0.000000 0.000000 0.000000 0.000001 0.000001 0.000003 0.000000 0.000001 0.000000 0.000001 0.000000 0.000001 0.000001 0.000000 0.000003 0.000000 ]
+clk: 1847830, wr dram addr: 0xf7eb80, 16247680, data: [0.000000 0.000001 0.000001 0.000000 0.000000 0.000000 0.000001 0.000001 0.000000 0.000001 0.000000 0.000000 0.000004 0.000000 0.000001 0.000001 ]
+clk: 1847831, wr dram addr: 0xf7ebc0, 16247744, data: [0.000000 0.000000 0.000000 0.000000 0.000001 0.000001 0.000001 0.000001 0.000016 0.000001 0.000002 0.000002 0.000000 0.000000 0.000002 0.000001 ]
+clk: 1847832, wr dram addr: 0xf7ec00, 16247808, data: [0.000000 0.000000 0.000001 0.000000 0.000000 0.000001 0.000000 0.000001 0.000000 0.000001 0.000000 0.000000 0.000001 0.000001 0.000003 0.000000 ]
+clk: 1847833, wr dram addr: 0xf7ec40, 16247872, data: [0.000000 0.000000 0.000002 0.000000 0.000000 0.000001 0.000001 0.000000 0.000002 0.000000 0.000001 0.000000 0.000000 0.000002 0.000000 0.000003 ]
+clk: 1847834, wr dram addr: 0xf7ec80, 16247936, data: [0.000000 0.000000 0.000000 0.000000 0.000002 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000001 0.000000 0.000000 0.000000 ]
+clk: 1847835, wr dram addr: 0xf7ecc0, 16248000, data: [0.000000 0.000002 0.000001 0.000000 0.000000 0.000001 0.000000 0.000000 0.000000 0.000001 0.000000 0.000001 0.000000 0.000000 0.000000 0.000001 ]
+clk: 1847836, wr dram addr: 0xf7ed00, 16248064, data: [0.000001 0.000000 0.000000 0.000000 0.000056 0.000000 0.000000 0.000001 0.000000 0.000000 0.000000 0.000000 0.000001 0.000000 0.000000 0.000000 ]
+clk: 1847837, wr dram addr: 0xf7ed40, 16248128, data: [0.000000 0.000000 0.000000 0.000000 0.000056 0.000001 0.000003 0.000012 0.000002 0.000000 0.000001 0.000000 0.000002 0.000001 0.000001 0.000000 ]
+clk: 1847838, wr dram addr: 0xf7ed80, 16248192, data: [0.000006 0.000001 0.000001 0.000001 0.000000 0.000002 0.000001 0.000002 0.000002 0.000000 0.000001 0.000001 0.000000 0.000001 0.000000 0.000000 ]
+clk: 1847839, wr dram addr: 0xf7edc0, 16248256, data: [0.000001 0.000002 0.000000 0.000001 0.000000 0.000000 0.000001 0.000001 0.000000 0.000005 0.000000 0.000007 0.000000 0.000001 0.000001 0.000001 ]
+clk: 1847840, wr dram addr: 0xf7ee00, 16248320, data: [0.000000 0.000001 0.000000 0.000001 0.000000 0.000000 0.000001 0.000000 0.000000 0.000001 0.000000 0.000000 0.000000 0.000008 0.000000 0.000000 ]
+clk: 1847841, wr dram addr: 0xf7ee40, 16248384, data: [0.000000 0.000023 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000001 0.000001 0.000000 0.000010 0.000000 0.000001 ]
+clk: 1847842, wr dram addr: 0xf7ee80, 16248448, data: [0.000000 0.000000 0.000000 0.000002 0.000000 0.000001 0.000000 0.000000 0.000000 0.000000 0.000000 0.000001 0.000001 0.000000 0.000000 0.000000 ]
+clk: 1847843, wr dram addr: 0xf7eec0, 16248512, data: [0.000001 0.000000 0.000000 0.000000 0.000001 0.000002 0.000000 0.000001 0.000001 0.000001 0.000000 0.000000 0.000000 0.000000 0.000000 0.000001 ]
+clk: 1847844, wr dram addr: 0xf7ef00, 16248576, data: [0.000001 0.000003 0.000002 0.000001 0.000000 0.000001 0.000000 0.000001 0.000000 0.000000 0.000005 0.000000 - - - - ]
+clk: 1847850, swap spm, wr done
+clk: 1847851, swap spm controller ALL done
+clk: 1847853, dma_exer COMPLETE
+clk: 1847855, issue_top: send scalar instruction, exer_id=13, func=6, rd=0, rs1=0, rs2=0, imm: 0
+clk: 1847857, dma exer, dma barrier
+clk: 1847858, dma_exer COMPLETE
+[ASE_dev]: trigger ase event: 8
+[ASE_dev]: SOC KERNEL DONE!
+[Simulator]: copy data from lpddr to CPU ...
+[ASE_dev]: trigger ase event: 8
+[AAS_dev]: DMA data from lpddr to cpu, src ptr: 0xc00000, dst ptr: 0xfd4a7800, len:3665712
+[AAS_dev]: wait for AAS_SOC_DMA_DONE
+[SIMULATOR]: DMA src ptr h: 0x0, ptr l: 0xc00000, src ptr: 0xc00000
+[SIMULATOR]: DMA dst ptr h: 0x7ff0, ptr l: 0xfd4a7800, dst ptr: 0x7ff0fd4a7800
+[SIMULATOR]: DMA len: 3665712
+[SIMULATOR]: adaptor select LPDDR pass
+[SIMULATOR]: CPU DMA will use 57277 clks via 64GB/s
+[ASE_dev]: trigger ase event: 2
+[ASE_dev]: dma done!
+[Simulator]: LPDDR to CPU done, check result
+[AAS_dev]: wait for AAS_SOC_DONE
+[ASE]: stop core...
+[ASE_dev]: exit simulation, sim_done:1
+[ASE]: simulation done, wait another request ...
+[ASE_dev]: trigger ase event: 1
+[ASE]: simulator exit
+[ASE_dev]: SOC done!
+Deviation = 2.10858e-06
+Err = 0
+Sum_Dif = 1.45324e-06
+Max_Id = 537039, H_Value = 0.00061863, ACC_Value = 0.000618602, Max_Dif = 2.81725e-08
+Max_Deviation_Id = 0, Max_Deviation = 0.00159777
+PR summary:
+Page Rank passed on dataset ../data/PR/web-Google/
+iter: 37
+traversed edges: 188886480
+total cycles: 1845275
+PR Performance: 95.3323 GTEPs
+GTEPS/W: 4.09652

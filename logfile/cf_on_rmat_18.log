@@ -1,0 +1,265 @@
+argc: 5
+argv[0]: ./test_simulator_testsuit
+argv[1]: -A
+argv[2]: CF
+argv[3]: -D
+argv[4]: ../data/CF/rmat-18/
+V_RW_SPM: total has 6 phy SPM, total addr width 25 bits, each phy spm addr width 22 bits
+V_SPM_SINGLE, contains simd 64 blocks, each addr width: 16
+V_SPM_SINGLE, contains simd 64 blocks, each addr width: 16
+V_SPM_SINGLE, contains simd 64 blocks, each addr width: 16
+V_SPM_SINGLE, contains simd 64 blocks, each addr width: 16
+V_SPM_SINGLE, contains simd 64 blocks, each addr width: 16
+V_SPM_SINGLE, contains simd 64 blocks, each addr width: 16
+[ASE]: mapped dsm ptr:0x7fd173ddb000, succeeded!
+[ASE]: start simulatoin loop, max cycles per turn: 1410065408
+csr edge num: 4194304
+clk: 0, flush_stage=0, scheduler_in_v_task=0, scheduler_send_e_task=0, M09_write_to_spm=0, M09_write_to_id_fifo=0, M09_write_to_data_fifo=0, M09_alu_in_num=0, M09_alu_out_num=0, M09_update_dst_read_single_get_task_num=0, M09_update_dst_read_single_send_task_num=0, M09_update_dst_read_single_read_spm_num=0, M09_update_dst_read_single_get_spm_data_num=0
+clk: 0, M08_combiner_rv_ct=0, M08_combiner_send_ct=0
+0
+m02_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m03_v_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m03_e_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m04_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m05_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m06_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m07_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m08_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+m09_full: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+clk: 1, rd_active_vertex: change empty, front=0, now=1
+clk: 1, rd_active_vertex: change empty, front=0, now=1
+[ASE_dev]: trigger ase event: 4
+csr vertex num: 262144
+CSR graph loaded
+Loaded edges: 4194304Ignored edges : 0
+Number of Triangles: 5594
+Number of Embeddings Traversed: 5594
+Cycles Consumed: 1420402
+GTSPS: 57.0416
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+Empty line @ 17
+1 scalar
+1 scalar
+1 scalar
+Empty line @ 21
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+Empty line @ 27
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+Empty line @ 37
+1 scalar
+1 vector
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 vector
+1 vector
+1 vector
+1 vector
+Empty line @ 54
+Empty line @ 55
+1 vector
+1 vector
+1 vector
+1 vector
+1 vector
+Empty line @ 61
+1 scalar
+1 vector
+1 vector
+1 vector
+1 vector
+1 vector
+1 vector
+1 vector
+1 vector
+1 vector
+1 vector
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 vector
+Empty line @ 80
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+1 scalar
+[AAS_dev]: wait for AAS_SOC_READY
+[ASE_dev]: SOC READY!
+[AAS_dev]: DMA data to lpddr, src ptr: 0x7fff93162c00, dst: 0, len:256
+[AAS_dev]: DMA data to lpddr, dma ptr h: 0x7fff, ptr l: 0x93162c00
+[AAS_dev]: wait for AAS_SOC_DMA_DONE
+[SIMULATOR]: DMA src ptr h: 0x7fff, ptr l: 0x93162c00, src ptr: 0x7fff93162c00
+[SIMULATOR]: DMA dst ptr h: 0x0, ptr l: 0x0, dst ptr: 0x0
+[SIMULATOR]: DMA len: 256
+[SIMULATOR]: adaptor select LPDDR pass
+[SIMULATOR]: CPU DMA will use 4 clks via 64GB/s
+[ASE_dev]: trigger ase event: 2
+[ASE_dev]: dma done!
+[AAS_dev]: DMA data to lpddr, src ptr: 0x7fd1724d5800, dst: 12582912, len:1048576
+[AAS_dev]: DMA data to lpddr, dma ptr h: 0x7fd1, ptr l: 0x724d5800
+[AAS_dev]: wait for AAS_SOC_DMA_DONE
+[SIMULATOR]: DMA src ptr h: 0x7fd1, ptr l: 0x724d5800, src ptr: 0x7fd1724d5800
+[SIMULATOR]: DMA dst ptr h: 0x0, ptr l: 0xc00000, dst ptr: 0xc00000
+[SIMULATOR]: DMA len: 1048576
+[SIMULATOR]: adaptor select LPDDR pass
+[SIMULATOR]: CPU DMA will use 16384 clks via 64GB/s
+[ASE_dev]: trigger ase event: 2
+[ASE_dev]: dma done!
+[AAS_dev]: DMA data to lpddr, src ptr: 0x7fd1724d5804, dst: 16777216, len:1048576
+[AAS_dev]: DMA data to lpddr, dma ptr h: 0x7fd1, ptr l: 0x724d5804
+[AAS_dev]: wait for AAS_SOC_DMA_DONE
+[SIMULATOR]: DMA src ptr h: 0x7fd1, ptr l: 0x724d5804, src ptr: 0x7fd1724d5804
+[SIMULATOR]: DMA dst ptr h: 0x0, ptr l: 0x1000000, dst ptr: 0x1000000
+[SIMULATOR]: DMA len: 1048576
+[SIMULATOR]: adaptor select LPDDR pass
+[SIMULATOR]: CPU DMA will use 16384 clks via 64GB/s
+[ASE_dev]: trigger ase event: 2
+[ASE_dev]: dma done!
+[AAS_dev]: DMA data to lpddr, src ptr: 0x7fd1723d3800, dst: 4194304, len:1048576
+[AAS_dev]: DMA data to lpddr, dma ptr h: 0x7fd1, ptr l: 0x723d3800
+[AAS_dev]: wait for AAS_SOC_DMA_DONE
+[SIMULATOR]: DMA src ptr h: 0x7fd1, ptr l: 0x723d3800, src ptr: 0x7fd1723d3800
+[SIMULATOR]: DMA dst ptr h: 0x0, ptr l: 0x400000, dst ptr: 0x400000
+[SIMULATOR]: DMA len: 1048576
+[SIMULATOR]: adaptor select LPDDR pass
+[SIMULATOR]: CPU DMA will use 16384 clks via 64GB/s
+[ASE_dev]: trigger ase event: 2
+[ASE_dev]: dma done!
+[AAS_dev]: DMA data to lpddr, src ptr: 0x7fd1723d3800, dst: 8388608, len:1048576
+[AAS_dev]: DMA data to lpddr, dma ptr h: 0x7fd1, ptr l: 0x723d3800
+[AAS_dev]: wait for AAS_SOC_DMA_DONE
+[SIMULATOR]: DMA src ptr h: 0x7fd1, ptr l: 0x723d3800, src ptr: 0x7fd1723d3800
+[SIMULATOR]: DMA dst ptr h: 0x0, ptr l: 0x800000, dst ptr: 0x800000
+[SIMULATOR]: DMA len: 1048576
+[SIMULATOR]: adaptor select LPDDR pass
+[SIMULATOR]: CPU DMA will use 16384 clks via 64GB/s
+[ASE_dev]: trigger ase event: 2
+[ASE_dev]: dma done!
+[AAS_dev]: DMA data to lpddr, src ptr: 0x7fd1725d8800, dst: 20971520, len:16777216
+[AAS_dev]: DMA data to lpddr, dma ptr h: 0x7fd1, ptr l: 0x725d8800
+[AAS_dev]: wait for AAS_SOC_DMA_DONE
+[SIMULATOR]: DMA src ptr h: 0x7fd1, ptr l: 0x725d8800, src ptr: 0x7fd1725d8800
+[SIMULATOR]: DMA dst ptr h: 0x0, ptr l: 0x1400000, dst ptr: 0x1400000
+[SIMULATOR]: DMA len: 16777216
+[SIMULATOR]: adaptor select LPDDR pass
+[SIMULATOR]: CPU DMA will use 262144 clks via 64GB/s
+0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575016, wr dram addr: 0x8ff4c0, 9434304, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575017, wr dram addr: 0x8ff500, 9434368, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575018, wr dram addr: 0x8ff540, 9434432, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575019, wr dram addr: 0x8ff580, 9434496, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575020, wr dram addr: 0x8ff5c0, 9434560, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575021, wr dram addr: 0x8ff600, 9434624, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575022, wr dram addr: 0x8ff640, 9434688, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575023, wr dram addr: 0x8ff680, 9434752, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575024, wr dram addr: 0x8ff6c0, 9434816, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575025, wr dram addr: 0x8ff700, 9434880, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575026, wr dram addr: 0x8ff740, 9434944, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575027, wr dram addr: 0x8ff780, 9435008, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575028, wr dram addr: 0x8ff7c0, 9435072, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575029, wr dram addr: 0x8ff800, 9435136, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575030, wr dram addr: 0x8ff840, 9435200, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575031, wr dram addr: 0x8ff880, 9435264, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575032, wr dram addr: 0x8ff8c0, 9435328, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575033, wr dram addr: 0x8ff900, 9435392, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575034, wr dram addr: 0x8ff940, 9435456, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575035, wr dram addr: 0x8ff980, 9435520, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575036, wr dram addr: 0x8ff9c0, 9435584, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575037, wr dram addr: 0x8ffa00, 9435648, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575038, wr dram addr: 0x8ffa40, 9435712, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575039, wr dram addr: 0x8ffa80, 9435776, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575040, wr dram addr: 0x8ffac0, 9435840, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575041, wr dram addr: 0x8ffb00, 9435904, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575042, wr dram addr: 0x8ffb40, 9435968, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575043, wr dram addr: 0x8ffb80, 9436032, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575044, wr dram addr: 0x8ffbc0, 9436096, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575045, wr dram addr: 0x8ffc00, 9436160, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575046, wr dram addr: 0x8ffc40, 9436224, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575047, wr dram addr: 0x8ffc80, 9436288, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575048, wr dram addr: 0x8ffcc0, 9436352, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575049, wr dram addr: 0x8ffd00, 9436416, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575050, wr dram addr: 0x8ffd40, 9436480, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575051, wr dram addr: 0x8ffd80, 9436544, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575052, wr dram addr: 0x8ffdc0, 9436608, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575053, wr dram addr: 0x8ffe00, 9436672, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575054, wr dram addr: 0x8ffe40, 9436736, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575055, wr dram addr: 0x8ffe80, 9436800, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575056, wr dram addr: 0x8ffec0, 9436864, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575057, wr dram addr: 0x8fff00, 9436928, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575058, wr dram addr: 0x8fff40, 9436992, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575059, wr dram addr: 0x8fff80, 9437056, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575060, wr dram addr: 0x8fffc0, 9437120, data: [0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ]
+clk: 1575066, swap spm, wr done
+clk: 1575067, swap spm controller ALL done
+clk: 1575069, dma_exer COMPLETE
+clk: 1575071, issue_top: send scalar instruction, exer_id=13, func=6, rd=0, rs1=0, rs2=0, imm: 0
+clk: 1575073, dma exer, dma barrier
+clk: 1575074, dma_exer COMPLETE
+[ASE_dev]: trigger ase event: 8
+[ASE_dev]: SOC KERNEL DONE!
+[Simulator]: copy data from lpddr to CPU ...
+[AAS_dev]: DMA data from lpddr to cpu, src ptr: 0x800000, dst ptr: 0x722d1800, len:64
+[AAS_dev]: wait for AAS_SOC_DMA_DONE
+[ASE_dev]: trigger ase event: 8
+[SIMULATOR]: DMA src ptr h: 0x0, ptr l: 0x800000, src ptr: 0x800000
+[SIMULATOR]: DMA dst ptr h: 0x7fd1, ptr l: 0x722d1800, dst ptr: 0x7fd1722d1800
+[SIMULATOR]: DMA len: 64
+[SIMULATOR]: adaptor select LPDDR pass
+[SIMULATOR]: CPU DMA will use 1 clks via 64GB/s
+[ASE_dev]: trigger ase event: 2
+[ASE_dev]: dma done!
+[AAS_dev]: wait for AAS_SOC_DONE
+[ASE]: stop core...
+[ASE_dev]: exit simulation, sim_done:1
+[ASE]: simulation done, wait another request ...
+[ASE_dev]: trigger ase event: 1
+[ASE]: simulator exit
+[ASE_dev]: SOC done!
+[Simulator]: LPDDR to CPU done, check result
+CF summary:
+CF passed on dataset ../data/CF/rmat-18/, cpu cf: 5594, soc cf: 5594
+CF cnt: 5594, traversed CF cnt: 81021968
+total cycles: 1572063
+CF performance: 51.538628 GTSPS
+GTSPS/W: 2.214663

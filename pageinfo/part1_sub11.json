@@ -1,0 +1,57 @@
+{
+    "id" : "part1_sub11",
+
+    "pool":{
+        "poolName": "pool_th",
+        "ssh":{
+            "poolName": "pool_th",
+            "hostname" : "192.168.10.21",
+            "username" : "yanghailong",
+            "key_filename" : "KEY_PATH",
+            "port" : 22,
+            "max_connections" : 5
+        }
+    },
+
+    "programList": {
+        "内存分析功能测试":{
+            "cmd": "/thfs3/home/yanghailong/midterm-demo/workdir/NCFX/run_analysis.sh",
+            "resultList": [
+                {
+                    "name": "加速域内存使用情况",
+                    "path": "/thfs3/home/yanghailong/midterm-demo/workdir/NCFX/backup/accl_memory_usage_rank0.png",
+                    "backPath": "/thfs3/home/yanghailong/midterm-demo/workdir/NCFX/backup/accl_memory_usage_rank0.png",
+                    "type": "image",
+                    "content": ""
+                },
+                {
+                    "name": "通用域内存使用情况",
+                    "path": "/thfs3/home/yanghailong/midterm-demo/workdir/NCFX/backup/memory_usage_rank0.png",
+                    "backPath": "/thfs3/home/yanghailong/midterm-demo/workdir/NCFX/backup/memory_usage_rank0.png",
+                    "type": "image",
+                    "content": ""
+                }
+            ]
+        }
+    },
+    
+    "description": {
+        "考核指标": [
+            "内存分析功能子模块实现了内存分析功能"
+          ],
+          "中期指标": [
+            "指标1.1：完成热点分析常用功能点"
+          ],
+          "完成指标": [
+            "指标1.1：完成热点分析常用功能点，支持两种不同体系架构的国产超算系统"
+          ],
+          "功能简介": [
+            "利用性能轨迹对加速器核函数进行内存使用情况统计分析"
+          ],
+          "演示设置": [
+            "演示平台：迈创",
+            "演示规模：万核",
+            "演示应用：MISA-MD"
+          ]
+    }
+}
