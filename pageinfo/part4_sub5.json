@@ -1,0 +1,60 @@
+{
+    "id" : "part4_sub5",
+
+    "pool":{
+        "poolName": "pool_th_xjtu_cx",
+        "ssh":{
+            "poolName": "pool_th_xjtu_cx",
+            "hostname" : "192.168.10.20",
+            "username" : "xjtu_cx",
+            "key_filename" : "KEY_PATH",
+            "port" : 22,
+            "max_connections" : 5
+        }
+    },
+
+    "programList": {
+        "通信建模":{
+            "cmd": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/comm/N-Hop/nhop_model_test.sh -p 1",
+            "resultList": [
+                {
+                    "name": "二项树广播算法实测数据",
+                    "path": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/comm/N-Hop/results/bcast/binomial_*.csv",
+                    "backPath": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/comm/N-Hop/results/bcast/binomial_*.csv.bak",
+                    "type": "text", 
+                    "content": ""
+                },
+                {
+                    "name": "二项树广播算法建模数据",
+                    "path": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/comm/N-Hop/results/bcast/binomial_modle.*",
+                    "backPath": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/comm/N-Hop/results/bcast/binomial_modle.*.bak",
+                    "type": "text",
+                    "content": ""
+                }
+            ]
+        }
+    },
+    
+    "description": {
+        "考核指标": [
+            "具备天河平台通信性能自动建模功能"
+           ],
+          "中期指标": [
+            "指标2.1：具备部分功能的原型系统"
+          ],
+          "完成指标": [
+               "指标2.1：支持2种不同体系架构的国产超算系统，具有计算性能、通信性能 、访存性能、 I/O 性能等自动建模功能"
+           ],
+          "功能简介": [
+            "首先，抽象平台的硬件和架构特征，通过测试程序得到相关的基础参数",
+            "然后，将相关参数代入数学模型，得到通信模型",
+            "同时，将程序运行时的配置作为可变参数输入模型",
+            "通信建模，使用IMB MPI基准程序进行评测，性能指标计算方法是：MAPE=（|基准程序实测数据-模型预测数据|）/基准程序实测数据"
+          ],
+          "演示设置": [
+            "演示平台：迈创",
+            "演示规模：256核",
+            "演示应用：IMB MPI"
+          ]
+    }
+}

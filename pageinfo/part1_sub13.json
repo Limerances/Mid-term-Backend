@@ -2,9 +2,9 @@
     "id" : "part1_sub13",
 
     "pool":{
-        "poolName": "pool_th",
+        "poolName": "pool_th_yanghailong",
         "ssh":{
-            "poolName": "pool_th",
+            "poolName": "pool_th_yanghailong",
             "hostname" : "192.168.10.21",
             "username" : "yanghailong",
             "key_filename" : "KEY_PATH",

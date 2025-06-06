@@ -12,13 +12,20 @@ from Crypto.Cipher import AES
 import base64
 from Crypto.Util.Padding import unpad
 
-
-# KEY_PATH = '/home/jasper/Developer/PyCharm/id_rsa_hust_server'
-# KEY_PATH = '/Users/jiminj/.ssh/id_rsa_hust_server'
 KEY_PATH = '/Users/apple/.ssh/id_rsa.pub'
+# KEY_PATH = '~/.ssh/id_rsa.pub'
 SERVER_TH = 'yanghailong@192.168.10.21'
 
-pool_th = SSHConnectionPool(
+# pool_th = SSHConnectionPool(
+#     hostname='192.168.10.21',
+#     username='yanghailong',
+#     key_filename=KEY_PATH,
+#     port=22,
+#     max_connections=5
+# )
+
+print(f"[SSHConnectionPool] 正在创建连接池... pool_th_yanghailong")
+pool_th_yanghailong = SSHConnectionPool(
     hostname='192.168.10.21',
     username='yanghailong',
     key_filename=KEY_PATH,
@@ -26,6 +33,16 @@ pool_th = SSHConnectionPool(
     max_connections=5
 )
 
+print(f"[SSHConnectionPool] 正在创建连接池... pool_th_xjtu_cx")
+pool_th_xjtu_cx = SSHConnectionPool(
+    hostname='192.168.10.21',
+    username='xjtu_cx',
+    key_filename=KEY_PATH,
+    port=22,
+    max_connections=5
+)
+
+print(f"[SSHConnectionPool] 正在创建连接池... pool_gpu7")
 pool_gpu7 = SSHConnectionPool(
     hostname='10.254.46.25',
     username='huoda',
@@ -34,13 +51,50 @@ pool_gpu7 = SSHConnectionPool(
     max_connections=5
 )
 
-pool_hg = SSHConnectionPool(
-    hostname='192.168.10.21',
-    username='yanghailong',
+print(f"[SSHConnectionPool] 正在创建连接池... pool_hg_buaa_hipo")
+pool_hg_buaa_hipo = SSHConnectionPool(
+    hostname='60.245.128.14',
+    username='buaa_hipo',
     key_filename=KEY_PATH,
-    port=22,
+    port=65010,
     max_connections=5
 )
+
+print(f"[SSHConnectionPool] 正在创建连接池... pool_hg_dtune")
+pool_hg_dtune = SSHConnectionPool(
+    hostname='60.245.128.14',
+    username='dtune',
+    key_filename=KEY_PATH,
+    port=65010,
+    max_connections=5
+)
+
+print(f"[SSHConnectionPool] 正在创建连接池... pool_hg_wangxg")
+pool_hg_wangxg = SSHConnectionPool(
+    hostname='60.245.128.14',
+    username='wangxg',
+    key_filename=KEY_PATH,
+    port=65010,
+    max_connections=5
+)
+
+def get_pool(pool_name):
+    pool = None
+    if pool_name == "pool_th_yanghailong":
+        pool = pool_th_yanghailong
+    elif pool_name == "pool_th_xjtu_cx":
+        pool = pool_th_xjtu_cx
+    elif pool_name == "pool_gpu7":
+        pool = pool_gpu7
+    elif pool_name == "pool_hg_buaa_hipo":
+        pool = pool_hg_buaa_hipo
+    elif pool_name == "pool_hg_dtune":
+        pool = pool_hg_dtune
+    elif pool_name == "pool_hg_wangxg":
+        pool = pool_hg_wangxg
+    else:
+        raise ValueError(f"未知的连接池名称: {pool_name}")
+    return pool
 
 def decrypt_cmd(cmd):
     try:
@@ -80,6 +134,17 @@ def execute_ssh_command_image(pool, command):
     finally:
         if client:
             pool.return_connection(client)
+            
+def execute_ssh_command_text(pool, command):
+    """使用连接池执行SSH命令"""
+    client = None
+    try:
+        client = pool.get_connection()
+        stdin, stdout, stderr = client.exec_command(command)
+        return stdout.read(), stderr.read()
+    finally:
+        if client:
+            pool.return_connection(client)
 
 def stream_ssh_command(pool, command, slp=True):
     """使用连接池执行SSH命令并返回生成器"""
@@ -106,27 +171,31 @@ def stream_ssh_command(pool, command, slp=True):
         if client:
             pool.return_connection(client)
 
+def check_path_exists(pool, pool_name, path):
+    # print(f"checking path: {path}")
+    stdout, stderr = execute_ssh_command(pool, f"ls {path}")
+    print("path check stdout:", stdout)
+    print("path check stderr:", stderr)
+    # if(stderr.strip() != ""):
+    #     raise ValueError(f"{pool_name} : {stderr}")
+        # raise (f"{pool_name} : {stderr}")
+
 def hello(request):
     print("debug: hello")
     return HttpResponse("Hello world ! ")
 
 
+def test_api(request):
+    check_path_exists(pool_th_yanghailong, "pool_th_yanghailong","/thfs3/home/yanghailong/midterm-demo/workdir/GZDW/misa-md")
+    return JsonResponse({
+        "errno": 0,
+        "message": "API is working correctly"
+    })
 
 
 def excute(request,pool_name, cmd):
     try:
-        if pool_name == "pool_th":
-            pool = pool_th
-        elif pool_name == "pool_gpu7":
-            pool = pool_gpu7
-        elif pool_name == "pool_hg":
-            pool = pool_hg
-        else:
-            return JsonResponse(
-            {"errno": 1, "message": "错误的ssh连接池"},
-            status=500
-            )
-        
+        pool = get_pool(pool_name)
         
         print("[research1_test] 收到请求")
         cmd = decrypt_cmd(cmd) # 解码URL编码的命令
@@ -155,26 +224,20 @@ def get_image(request):
             print(data)
             path = data.get('path')
             pool_name = data.get('poolName')
-            
-            if pool_name == "pool_th":
-                pool = pool_th
-            elif pool_name == "pool_gpu7":
-                pool = pool_gpu7
-            elif pool_name == "pool_hg":
-                pool = pool_hg
-            else:
-                return JsonResponse(
-                {"errno": 1, "message": "错误的ssh连接池"},
-                status=500
-                )
+            pool = get_pool(pool_name)
     
             if not path or not pool_name:
                 return JsonResponse({"errno": 1, "message": "缺少必要参数 path"}, status=400)
             
-            #图像
+            # 检查路径是否存在
+            # check_path_exists(pool, pool_name, path)
+            
+            #获取图像
             stdout, stderr = execute_ssh_command_image(pool, f"cat {path}")
-            if stderr:
-                return JsonResponse({"errno": 1, "message": f"执行失败: {stderr}"}, status=500)
+            print(f"get_image stderr: {stderr}")
+            # if stderr:
+            #     return JsonResponse({"errno": 1, "message": f"执行失败: {stderr}"}, status=500)
+            
             #类型
             mime_stdout, mime_stderr = execute_ssh_command(pool, f"file --mime-type -b {path}")
             if mime_stderr:
@@ -201,27 +264,22 @@ def get_text(request):
             print(data)
             path = data.get('path')
             pool_name = data.get('poolName')
-            
-            if pool_name == "pool_th":
-                pool = pool_th
-            elif pool_name == "pool_gpu7":
-                pool = pool_gpu7
-            elif pool_name == "pool_hg":
-                pool = pool_hg
-            else:
-                return JsonResponse(
-                {"errno": 1, "message": "错误的ssh连接池"},
-                status=500
-                )
+            pool = get_pool(pool_name)
     
             if not path or not pool_name:
                 return JsonResponse({"errno": 1, "message": "缺少必要参数 path 或 pool_name"}, status=400)
+
+            # 检查路径是否存在
+            check_path_exists(pool, pool_name, path)
             
-            stdout, stderr = execute_ssh_command_image(pool, f"cat {path}")
-            if stderr:
-                return JsonResponse({"errno": 1, "message": f"执行失败: {stderr}"}, status=500)
+            # 获取文本
+            stdout, stderr = execute_ssh_command_text(pool, f"cat {path}")
+            print(f"get_text stderr: {stderr}")
+            # if stderr:
+            #     return JsonResponse({"errno": 1, "message": f"执行失败: {stderr}"}, status=500)
 
             return JsonResponse({"errno": 0, "text": stdout.decode('utf-8'), "message": "获取成功"})
+            # return JsonResponse({"errno": 0, "text": stdout, "message": "获取成功"})
             
         except Exception as e:
             print(f"[get_text] 错误: {str(e)}")

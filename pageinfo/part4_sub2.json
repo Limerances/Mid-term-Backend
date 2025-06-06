@@ -1,0 +1,63 @@
+{
+    "id" : "part4_sub2",
+
+    "pool":{
+        "poolName": "pool_hg_dtune",
+        "ssh":{
+            "poolName": "pool_hg_dtune",
+            "hostname" : "60.245.128.10",
+            "username" : "dtune",
+            "key_filename" : "KEY_PATH",
+            "port" : 65010,
+            "max_connections" : 5
+        }
+    },
+    
+    "programList": {
+           "计算性能自动调优":{
+            "cmd": "/work1/dtune/AMT-Toolkits/tests/compute/adtuner_test.sh",
+            "resultList": [
+                {
+                    "name": "X-BLUE核函数不同策略调优数据文件",
+                     "path": "/work1/dtune/AMT-Toolkits/tests/compute/kernel/bluex_gaus/results/",
+                    "backPath": "/work1/dtune/AMT-Toolkits/tests/compute/kernel/bluex_gaus/results.bak/",
+                    "type": "text",
+                    "content": ""
+                },
+                {
+                    "name": "X-BLUE应用调优前后性能对比结果文件",
+                    "path": "/public/home/dtune/zhaolei/middle_test_results/",
+                    "backPath": "/public/home/dtune/zhaolei/middle_test_results.bak/",
+                    "type": "text",
+                    "content": ""
+                }
+            ]
+        }
+    },
+    
+    "description": {
+        "考核指标": [
+            "具备海光平台计算性能自动调优功能"
+           ],
+          "中期指标": [
+            "指标3.1：具备部分功能的原型系统"
+          ],
+          "完成指标": [
+            "指标3.1：支持2种不同体 系架构的国 产超算系统，在 5 个以上典型并行应用程序性能提升不低于 5%（性能提升对比立项时应用程序状态，并确保技术验收时调优后的应用程序性能领先）"
+           ],
+          "功能简介": [
+            "支持如下3种调优策略：",
+            "策略1：基于实测反馈的启发式迭代调优策略",
+            "策略2：基于模型预测的调优策略",
+            "策略3：基于模型预测与实测反馈TopK的调优策略的调优",
+            "首先，通过不同策略对应用核函数配置进行调优",
+            "然后，使用调优后的核函数配置替换应用默认的核函数配置",
+            "最后，评估调优前后应用性能的提升"
+          ],
+          "演示设置": [
+            "演示平台：海光",
+            "演示规模：2节点8DCU卡512核",
+            "演示应用：X-BLUE"
+          ]
+    }
+}

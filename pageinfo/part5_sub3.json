@@ -1,0 +1,64 @@
+{
+    "id" : "part5_sub3",
+
+    "pool":{
+        "poolName": "pool_hg_wangxg",
+        "ssh":{
+            "poolName": "pool_hg_wangxg",
+            "hostname" : "ssh.hpcer.dev",
+            "username" : "wangxg",
+            "key_filename" : "KEY_PATH",
+            "port" : 2222,
+            "max_connections" : 5
+        }
+    },
+
+    "programList": {
+        "I/O预测功能":{
+            "cmd": "/public/home/wangxg/work1/zhuhaoran/io-predict/bash.sh",
+            "resultList": [
+                {
+                    "name": "I/O策略1预测实测对比图",
+                    "path": "/public/home/wangxg/work1/zhuhaoran/io-predict/algrithm-01.png",
+                    "backPath": "/public/home/wangxg/work1/zhuhaoran/io-predict/backpath/algrithm-01.png",
+                    "type": "image", 
+                    "content": ""
+                },
+                {
+                    "name": "I/O策略2预测实测对比图",
+                    "path": "/public/home/wangxg/work1/zhuhaoran/io-predict/algrithm-02.png",
+                    "backPath": "/public/home/wangxg/work1/zhuhaoran/io-predict/backpath/algrithm-02.png",
+                    "type": "image", 
+                    "content": ""
+                },{
+                    "name": "两种I/O策略推荐图",
+                    "path": "/public/home/wangxg/work1/zhuhaoran/io-predict/algrithm-select.png",
+                    "backPath": "/public/home/wangxg/work1/zhuhaoran/io-predict/backpath/algrithm-select.png",
+                    "type": "image", 
+                    "content": ""
+                }
+
+            ]
+        }
+    },
+    
+    "description": {
+        "考核指标": [
+            "完成 I/O 负载分析与对 I/O 及其通信模式建模"
+          ],
+          "中期指标": [
+            "指标3.2：完成 I/O 负载分析与对 I/O 及其通信模式建模"
+          ],
+          "完成指标": [
+            "指标3.2：支持 2 种不同体系架构的国产超算系统，实现>5 个行业示范应用且I/O 性能提升≥20%"
+          ],
+          "功能简介": [
+            "对不同I/O策略的MISA-MD程序进行I/O性能预测"
+          ],
+          "演示设置": [
+            "演示平台：419",
+            "演示规模：96核",
+            "演示应用：IOP"
+          ]
+    }
+}

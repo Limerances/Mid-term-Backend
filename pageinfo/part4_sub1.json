@@ -1,0 +1,64 @@
+{
+    "id" : "part4_sub1",
+
+    "pool":{
+        "poolName": "pool_hg_dtune",
+        "ssh":{
+            "poolName": "pool_hg_dtune",
+            "hostname" : "60.245.128.10",
+            "username" : "dtune",
+            "key_filename" : "KEY_PATH",
+            "port" : 65010,
+            "max_connections" : 5
+        }
+    },
+    
+    "programList": {
+
+        "编译器自动调优":{
+            "cmd": "/work1/dtune/AMT-Toolkits/tests/compile/TimeSaverHRL_run.sh",
+            "resultList": [
+                {
+                    "name": "调优工具搜到的最佳编译序列及优化率等信息记录文档",
+                    "path": "/work1/dtune/AMT-Toolkits/tests/compile/multi_result.txt",
+                    "backPath": "/work1/dtune/AMT-Toolkits/tests/compile/multi_result_backup.txt",
+                    "type": "text", 
+                    "content": ""
+                },
+                {
+                    "name": "调优工具的搜索过程记录文档",
+                    "path": "/work1/dtune/AMT-Toolkits/tests/compile/TimeSaverHRL_DQMC_MPI_output.txt",
+                    "backPath": "/work1/dtune/AMT-Toolkits/tests/compile/TimeSaverHRL_DQMC_MPI_output_backup.txt",
+                    "type": "text",
+                    "content": ""
+                }
+            ]
+        }
+    },
+    
+    "description": {
+          "考核指标": [
+            "指标1.1：编译器自动调优"
+          ],
+          "中期指标": [
+            "指标1.1：具备部分功能的原型系统"
+            
+          ],
+          "完成指标": [
+            "指标1.1：编译器自动调优支持2种不同体系架构的国产超算系统，调优后比调优前性能提升5%-10%"            
+          ],
+          "功能简介": [
+            "编译器自动调优以通用的智能框架来应对硬件结构的复杂性，利用强化学习处理复杂决策的灵活性来提高系统对于硬件特性与应用程序特征的动态适应性",
+            "根据目标程序的特征通过任务定义、架构搜索与强化学习参数调优过程，来为其选择最为适配的强化学习算法，并最终完成编译器调优过程",
+            "在具体执行中，通过策略空间定义组件注册多种编译器优化选项，并支持多编译器（如 Intel ifx/ifort、GNU gcc/g++）的优化功能，以适应不同的应用程序",
+            "分层强化学习模型自动为应用程序选择准最优的编译器优化选项组合，并确定其执行顺序",
+            "接着，通过动态修改程序 Makefile 文件实现其自动化编译运行，并自动采集性能数据",
+            "在 RewardCalculator 模块中实时计算加速比，待调优作业运行结束后自动保存达到最佳优化效果的选项序列"
+          ],
+          "演示设置": [
+            "演示平台：海光",
+            "演示规模：多核MPI并行计算环境",
+            "演示应用：DQMC_MPI"
+          ]
+    }
+}

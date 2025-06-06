@@ -1,0 +1,57 @@
+{
+    "id" : "part5_sub1",
+
+    "pool":{
+        "poolName": "pool_hg_wangxg",
+        "ssh":{
+            "poolName": "pool_hg_wangxg",
+            "hostname" : "ssh.hpcer.dev",
+            "username" : "wangxg",
+            "key_filename" : "KEY_PATH",
+            "port" : 2222,
+            "max_connections" : 5
+        }
+    },
+
+    "programList": {
+        "IOP 采集功能":{
+            "cmd": "/public/home/wangxg/work1/guoshanchuan/MISA-MD-develop/example/IOP1.sh",
+            "resultList": [
+                {
+                    "name": "压缩存储的性能数据格式(二进制）",
+                    "path": "/public/home/wangxg/work1/guoshanchuan/MISA-MD-develop/example/md-cur.log",
+                    "backPath": "/public/home/wangxg/work1/guoshanchuan/MISA-MD-develop/example/backpath/mpi_iomsg.txt",
+                    "type": "text", 
+                    "content": ""
+                },
+                {
+                    "name": "json格式的性能数据记录",
+                    "path": "/public/home/wangxg/work1/guoshanchuan/MISA-MD-develop/example/io_timeline.json",
+                    "backPath": "/public/home/wangxg/work1/guoshanchuan/MISA-MD-develop/example/backpath/io_timeline.json",
+                    "type": "text",
+                    "content": ""
+                }
+            ]
+        }
+    },
+    
+    "description": {
+        "考核指标": [
+            "在小规模集群初步实现 I/O 性能诊断工具、I/O 通信性能诊断工具与I/O 预测工具"
+          ],
+          "中期指标": [
+            "指标3.1：在小规模集群初步实现 I/O 性能诊断工具、I/O 通信性能诊断工具与I/O 预测工具"
+          ],
+          "完成指标": [
+            "指标3.1：形成千万核以上规模应用的 I/O 性能诊断工具、I/O 通信性能诊断工具与I/O 预测工具"
+          ],
+          "功能简介": [
+            "进行多层次细粒度的I/O性能与通信性能采集"
+          ],
+          "演示设置": [
+            "演示平台：419",
+            "演示规模：96核",
+            "演示应用：IOP"
+          ]
+    }
+}

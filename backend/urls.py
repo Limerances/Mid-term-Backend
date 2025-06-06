@@ -29,6 +29,7 @@ urlpatterns = [
     path("getImage", views.get_image, name="get_image"),
     path("getText", views.get_text, name="get_text"),
     path('getPageInfo', views.get_page_info, name='get_page_info'),
+    path('testApi', views.test_api, name='test_api'),
     
     # path('part1/execute/<str:algo>/<str:dataset>/', views.part1, name="part1"),
     # path('part1/result/<str:algo>/<str:dataset>/', views.get_part1_result, name="part1"),
