@@ -1,0 +1,51 @@
+
+{
+    "id" : "part1_sub6",
+
+    "pool":{
+        "poolName": "pool_th_yanghailong",
+        "ssh":{
+            "poolName": "pool_th_yanghailong",
+            "hostname" : "192.168.10.21",
+            "username" : "yanghailong",
+            "key_filename" : "KEY_PATH",
+            "port" : 22,
+            "max_connections" : 5
+        }
+    },
+
+    "programList": {
+        "misa-md":{
+            "cmd": "/thfs3/home/yanghailong/workdir/SJBS-TEST/misa-md/run.sh",
+            "resultList": [
+                {
+                    "name": "数据表示报告",
+                    "path": "/thfs3/home/yanghailong/workdir/SJBS-TEST/misa-md/logs/analysis/SJBS.log",
+                    "backPath": "/thfs3/home/yanghailong/workdir/SJBS-TEST/misa-md/logs/analysis/SJBS_.log",
+                    "type": "text", 
+                    "content": ""
+                }
+            ]
+        }
+    },
+    
+    "description": {
+        "考核指标": [
+            "常用性能分析功能"
+          ],
+          "中期指标": [
+            "完成常用功能点包括故障定位、热点分析、内存分析、通信分析功能"
+          ],
+          "完成指标": [
+            "支持2种不同体系架构的国产超算系统，完成常用功能点包括故障定位、热点分析、内存分析、通信分析、性能轨迹分析和可扩展性瓶检测等（对标国际主流类似软件）" 
+          ],
+          "功能简介": [
+            "不同类型的性能数据按照进程、线程等分级存储，每个节点内所有进程的性能数据聚合，共用一个存储文件"
+          ],
+          "演示设置": [
+            "演示平台：迈创",
+            "演示规模：万核",
+            "演示应用：misa-md"
+          ]
+    }
+}
