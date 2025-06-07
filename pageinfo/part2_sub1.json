@@ -1,0 +1,64 @@
+{
+    "id" : "part2_sub1",
+
+    "pool":{
+        "poolName": "pool_th_penglin_lxx",
+        "ssh":{
+            "poolName": "pool_th_penglin_lxx",
+            "hostname" : "192.168.10.20",
+            "username" : "penglin_9s",
+            "key_filename" : "KEY_PATH",
+            "port" : 22,
+            "max_connections" : 5
+        }
+    },
+    "programList": {
+        "通用域硬件事件采集":{
+            "cmd": "/thfs1/home/penglin_lxx/workplace/papi-7.1.0/src/ctests/test.sh",
+            "resultList": [
+                {
+                    "name": "通用域硬件事件采集日志",
+                    "path": "/thfs1/home/penglin_lxx/workplace/papi-7.1.0/src/ctests/logwk",
+                    "backPath": "/thfs1/home/penglin_lxx/workplace/papi-7.1.0/src/ctests/0-archive/logwk",
+                    "type": "text", 
+                    "content": ""
+                }
+            ]
+        },
+        "加速域性能事件采集":{
+            "cmd": "/thfs1/home/penglin_lxx/workplace/papi-7.1.0/src/components/mt/tests/run.sh",
+            "resultList": [
+                {
+                    "name": "加速域性能事件采集日志",
+                    "path": "/thfs1/home/penglin_lxx/workplace/papi-7.1.0/src/components/mt/tests/logwk",
+                    "backPath": "/thfs1/home/penglin_lxx/workplace/papi-7.1.0/src/components/mt/tests/0-archive/logwk",
+                    "type": "text", 
+                    "content": ""
+                }
+            ]
+        }
+    },
+    
+    "description": {
+        "考核指标": [
+            "统一的性能监测和调试接口"
+          ],
+          "中期指标": [
+            "指标1.1：提供统一的性能监测和调试接口"
+          ],
+          "完成指标": [
+            "指标1.1：实现统一的迈创国产超算系统性能监测和调试接口"
+          ],
+          "功能简介": [
+            "首先，查看当前硬件信息。以及支持监控的21个预置CPU事件",
+            "然后，编译PAPI自带的通用域算例，并运行算例测试通用域硬件事件采集情况",
+            "最后，查看加速域性能事件，编译加速域测试算例，运行测试程序测试加速域上的性能事件采集情况"
+           
+          ],
+          "演示设置": [
+            "演示平台：迈创",
+            "演示规模：单核",
+            "演示应用：处理器性能监测"
+          ]
+    }
+}

@@ -11,6 +11,13 @@ from urllib.parse import unquote
 from Crypto.Cipher import AES
 import base64
 from Crypto.Util.Padding import unpad
+import tempfile
+import os
+import mimetypes
+
+TEMP_DIR = "tmp"
+if not os.path.exists(TEMP_DIR):
+    os.makedirs(TEMP_DIR)
 
 KEY_PATH = '/Users/apple/.ssh/id_rsa.pub'
 # KEY_PATH = '~/.ssh/id_rsa.pub'
@@ -37,6 +44,15 @@ print(f"[SSHConnectionPool] 正在创建连接池... pool_th_xjtu_cx")
 pool_th_xjtu_cx = SSHConnectionPool(
     hostname='192.168.10.21',
     username='xjtu_cx',
+    key_filename=KEY_PATH,
+    port=22,
+    max_connections=5
+)
+
+print(f"[SSHConnectionPool] 正在创建连接池... pool_th_penglin_lxx")
+pool_th_penglin_lxx = SSHConnectionPool(
+    hostname='192.168.10.21',
+    username='penglin_lxx',
     key_filename=KEY_PATH,
     port=22,
     max_connections=5
@@ -78,12 +94,23 @@ pool_hg_wangxg = SSHConnectionPool(
     max_connections=5
 )
 
+print(f"[SSHConnectionPool] 正在创建连接池... pool_hg_wangjh")
+pool_hg_wangjh = SSHConnectionPool(
+    hostname='60.245.128.14',
+    username='wangjh',
+    key_filename=KEY_PATH,
+    port=65010,
+    max_connections=5
+)
+
 def get_pool(pool_name):
     pool = None
     if pool_name == "pool_th_yanghailong":
         pool = pool_th_yanghailong
     elif pool_name == "pool_th_xjtu_cx":
         pool = pool_th_xjtu_cx
+    elif pool_name == "pool_th_penglin_lxx":
+        pool = pool_th_penglin_lxx
     elif pool_name == "pool_gpu7":
         pool = pool_gpu7
     elif pool_name == "pool_hg_buaa_hipo":
@@ -92,6 +119,8 @@ def get_pool(pool_name):
         pool = pool_hg_dtune
     elif pool_name == "pool_hg_wangxg":
         pool = pool_hg_wangxg
+    elif pool_name == "pool_hg_wangjh":
+        pool = pool_hg_wangjh
     else:
         raise ValueError(f"未知的连接池名称: {pool_name}")
     return pool
@@ -162,7 +191,7 @@ def stream_ssh_command(pool, command, slp=True):
             
             yield f"data: {line.rstrip()}\n\n"
             if slp == True:
-                time.sleep(0.01)
+                time.sleep(0.001)
         
         yield "data: [done]\n\n"
     except Exception as e:
@@ -197,11 +226,11 @@ def excute(request,pool_name, cmd):
     try:
         pool = get_pool(pool_name)
         
-        print("[research1_test] 收到请求")
+        print("[excute] 收到请求")
         cmd = decrypt_cmd(cmd) # 解码URL编码的命令
         cmd = 'bash' + ' ' + cmd
         # cmd = 'bash /thfs3/home/yanghailong/midterm-demo/workdir/GZDW/misa-md/run_analysis.sh'
-        print(f"[research1_test] 执行命令: {cmd}")
+        print(f"[excute] 执行命令: {cmd}")
     
         response = StreamingHttpResponse(
             stream_ssh_command(pool, cmd),
@@ -211,84 +240,150 @@ def excute(request,pool_name, cmd):
         return response
         
     except Exception as e:
-        print(f"[research1_test] 错误: {str(e)}")
+        print(f"[excute] 错误: {str(e)}")
         return JsonResponse(
             {"status": 500, "error": str(e)},
             status=500
         )
-        
+
+
 def get_image(request):
     if request.method == 'POST':
-        try:                
+        try:
             data = json.loads(request.body)
-            print(data)
+            print("[get_image] 收到请求数据:", data)
+            
             path = data.get('path')
             pool_name = data.get('poolName')
-            pool = get_pool(pool_name)
-    
+            
             if not path or not pool_name:
-                return JsonResponse({"errno": 1, "message": "缺少必要参数 path"}, status=400)
+                return JsonResponse({"errno": 1, "message": "缺少必要参数 path 或 poolName"}, status=400)
             
-            # 检查路径是否存在
-            # check_path_exists(pool, pool_name, path)
-            
-            #获取图像
-            stdout, stderr = execute_ssh_command_image(pool, f"cat {path}")
-            print(f"get_image stderr: {stderr}")
-            # if stderr:
-            #     return JsonResponse({"errno": 1, "message": f"执行失败: {stderr}"}, status=500)
-            
-            #类型
-            mime_stdout, mime_stderr = execute_ssh_command(pool, f"file --mime-type -b {path}")
-            if mime_stderr:
-                return JsonResponse({"errno": 1, "message": f"获取 MIME 类型失败: {mime_stderr}"}, status=500)
-            content_type = mime_stdout.strip()  # 例如 "image/png"
-            if not content_type:
-                content_type = 'application/octet-stream'
+            pool = get_pool(pool_name)
 
-            return HttpResponse(stdout, content_type=content_type)
+            # 创建临时文件
+            temp_file = tempfile.NamedTemporaryFile(dir=TEMP_DIR, delete=False)
+            temp_file_path = temp_file.name
+            temp_file.close()
+
+            # 使用本地 subprocess 执行 scp
+            scp_cmd = [
+                'scp',
+                '-P', str(pool.port), 
+                f'{pool.username}@{pool.hostname}:{path}',
+                temp_file_path
+            ]
+            print("[get_image] 执行本地 scp 命令:", ' '.join(scp_cmd))
+
+            try:
+                subprocess.run(scp_cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            except subprocess.CalledProcessError as e:
+                print(e.stderr)
+                os.remove(temp_file_path)
+                return JsonResponse({
+                    "errno": 1,
+                    "message": f"SCP 失败: {e.stderr.decode('utf-8')}"
+                }, status=500)
+            print("1")
             
+            # 读取本地临时文件内容
+            try:
+                with open(temp_file_path, 'rb') as f:
+                    image_data = f.read()
+            except Exception as e:
+                os.remove(temp_file_path)
+                return JsonResponse({
+                    "errno": 1,
+                    "message": f"读取本地临时文件失败: {str(e)}"
+                }, status=500)
+
+            # 获取 MIME 类型
+            mime_type, _ = mimetypes.guess_type(temp_file_path)
+            if not mime_type:
+                mime_type = 'application/octet-stream'
+            content_type = mime_type.strip()
+            
+            os.remove(temp_file_path)
+
+            return HttpResponse(image_data, content_type=content_type)
+
         except Exception as e:
             print(f"[get_image] 错误: {str(e)}")
             return JsonResponse({
                 "errno": 1,
                 "message": f"获取失败: {str(e)}"
             }, status=500)
-    
+
     return JsonResponse({"errno": 1, "message": "请求方法不支持"}, status=405)
+
 
 def get_text(request):
     if request.method == 'POST':
         try:
             data = json.loads(request.body)
-            print(data)
+            print("[get_text] 收到请求数据:", data)
+            
             path = data.get('path')
             pool_name = data.get('poolName')
-            pool = get_pool(pool_name)
-    
+
             if not path or not pool_name:
-                return JsonResponse({"errno": 1, "message": "缺少必要参数 path 或 pool_name"}, status=400)
+                return JsonResponse({"errno": 1, "message": "缺少必要参数 path 或 poolName"}, status=400)
 
-            # 检查路径是否存在
-            check_path_exists(pool, pool_name, path)
-            
-            # 获取文本
-            stdout, stderr = execute_ssh_command_text(pool, f"cat {path}")
-            print(f"get_text stderr: {stderr}")
-            # if stderr:
-            #     return JsonResponse({"errno": 1, "message": f"执行失败: {stderr}"}, status=500)
+            pool = get_pool(pool_name)
 
-            return JsonResponse({"errno": 0, "text": stdout.decode('utf-8'), "message": "获取成功"})
-            # return JsonResponse({"errno": 0, "text": stdout, "message": "获取成功"})
-            
+            # 创建临时文件
+            temp_file = tempfile.NamedTemporaryFile(dir=TEMP_DIR, delete=False)
+            temp_file_path = temp_file.name
+            temp_file.close()
+
+            # 使用 subprocess 执行 scp 命令
+            scp_cmd = [
+                'scp',
+                '-P', str(pool.port),
+                f'{pool.username}@{pool.hostname}:{path}',
+                temp_file_path
+            ]
+            print("[get_text] 执行本地 scp 命令:", ' '.join(scp_cmd))
+
+            try:
+                subprocess.run(scp_cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            except subprocess.CalledProcessError as e:
+                print("[get_text] scp 失败:", e.stderr)
+                os.remove(temp_file_path)
+                return JsonResponse({
+                    "errno": 1,
+                    "message": f"SCP 失败: {e.stderr.decode('utf-8')}"
+                }, status=500)
+
+            # 读取文本内容
+            try:
+                with open(temp_file_path, 'r', encoding='utf-8') as f:
+                    text = f.read()
+            except Exception as e:
+                os.remove(temp_file_path)
+                return JsonResponse({
+                    "errno": 1,
+                    "message": f"读取本地文件失败: {str(e)}"
+                }, status=500)
+
+            # 删除临时文件
+            os.remove(temp_file_path)
+
+            return JsonResponse({
+                "errno": 0,
+                "text": text,
+                "message": "获取成功"
+            })
+
         except Exception as e:
             print(f"[get_text] 错误: {str(e)}")
             return JsonResponse({
                 "errno": 1,
                 "message": f"获取失败: {str(e)}"
             }, status=500)
-    
+
     return JsonResponse({"errno": 1, "message": "请求方法不支持"}, status=405)
+
 
 def get_page_info(request):
     if request.method == 'POST':

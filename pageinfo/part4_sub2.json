@@ -14,22 +14,50 @@
     },
     
     "programList": {
-           "计算性能自动调优":{
-            "cmd": "/work1/dtune/AMT-Toolkits/tests/compute/adtuner_test.sh",
+            "加速器核函数计算性能自动建模":{
+            "cmd": "/work1/dtune/AMT-Toolkits/tests/compute/model_test.sh",
             "resultList": [
                 {
-                    "name": "X-BLUE核函数不同策略调优数据文件",
-                     "path": "/work1/dtune/AMT-Toolkits/tests/compute/kernel/bluex_gaus/results/",
-                    "backPath": "/work1/dtune/AMT-Toolkits/tests/compute/kernel/bluex_gaus/results.bak/",
+                    "name": "训练集性能数据文件",
+                    "path": "/work1/dtune/AMT-Toolkits/tests/compute/models/trainData.csv",
+                    "backPath": "/work1/dtune/AMT-Toolkits/tests/compute/models/models_bak/trainData.csv",
+                    "type": "text", 
+                    "content": ""
+                },
+                {
+                    "name": "测试集性能数据文件",
+                    "path": "/work1/dtune/AMT-Toolkits/tests/compute/models/testTrueData.csv",
+                    "backPath": "/work1/dtune/AMT-Toolkits/tests/compute/models/models_bak/testTrueData.csv",
+                    "type": "text", 
+                    "content": ""
+                },
+                {
+                    "name": "bbc预测模型文件",
+                    "path": "/work1/dtune/AMT-Toolkits/tests/compute/models/bbc_model_best.pth",
+                    "backPath": "/work1/dtune/AMT-Toolkits/tests/compute/models/models_bak/bbc_model_best.pth",
                     "type": "text",
                     "content": ""
                 },
                 {
-                    "name": "X-BLUE应用调优前后性能对比结果文件",
-                    "path": "/public/home/dtune/zhaolei/middle_test_results/",
-                    "backPath": "/public/home/dtune/zhaolei/middle_test_results.bak/",
+                    "name": "时间预测模型文件",
+                    "path": "/work1/dtune/AMT-Toolkits/tests/compute/models/time_model_best.pth",
+                    "backPath": "/work1/dtune/AMT-Toolkits/tests/compute/models/models_bak/time_model_best.pth",
                     "type": "text",
                     "content": ""
+                },
+                {
+                    "name": "模型预测结果文件",
+                    "path": "/work1/dtune/AMT-Toolkits/tests/compute/models/predict.txt",
+                    "backPath": "/work1/dtune/AMT-Toolkits/tests/compute/models/models_bak/predict.txt",
+                    "type": "text",
+                    "content": ""
+                },
+                {
+                    "name": "模型预测效果图",
+                    "path": "/work1/dtune/AMT-Toolkits/tests/compute/models/true_vs_predicted_time.png",
+                    "backPath": "/work1/dtune/AMT-Toolkits/tests/compute/models/models_bak/true_vs_predicted_time.png",
+                    "type": "image",
+                    "content": "测试集上真实值与预测值的散点图"
                 }
             ]
         }
@@ -37,26 +65,23 @@
     
     "description": {
         "考核指标": [
-            "具备海光平台计算性能自动调优功能"
+            "具备海光平台计算性能自动建模功能"
            ],
           "中期指标": [
-            "指标3.1：具备部分功能的原型系统"
+            "指标2.1：具备部分功能的原型系统"
           ],
           "完成指标": [
-            "指标3.1：支持2种不同体 系架构的国 产超算系统，在 5 个以上典型并行应用程序性能提升不低于 5%（性能提升对比立项时应用程序状态，并确保技术验收时调优后的应用程序性能领先）"
+            "指标2.1：支持2种不同体系架构的国产超算系统，具有计算性能、通信性能 、访存性能、 I/O 性能等自动建模功能"
            ],
-          "功能简介": [
-            "支持如下3种调优策略：",
-            "策略1：基于实测反馈的启发式迭代调优策略",
-            "策略2：基于模型预测的调优策略",
-            "策略3：基于模型预测与实测反馈TopK的调优策略的调优",
-            "首先，通过不同策略对应用核函数配置进行调优",
-            "然后，使用调优后的核函数配置替换应用默认的核函数配置",
-            "最后，评估调优前后应用性能的提升"
+         "功能简介": [
+            "首先，提取并收集每个核函数的相关静态和动态特征",
+            "然后，训练用于预测基本块计数（bbc）的模型",
+            "其次，基于预测的bbc和线程块配置等特征，训练时间预测模型",
+            "最后，实现核函数执行时间的准确预测，性能评估指标为平均绝对百分比误差（MAPE）"
           ],
           "演示设置": [
             "演示平台：海光",
-            "演示规模：2节点8DCU卡512核",
+            "演示规模：单节点",
             "演示应用：X-BLUE"
           ]
     }

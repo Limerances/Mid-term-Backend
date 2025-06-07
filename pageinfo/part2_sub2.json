@@ -1,0 +1,63 @@
+{
+    "id" : "part2_sub2",
+
+    "pool":{
+        "poolName": "pool_th_penglin_lxx",
+        "ssh":{
+            "poolName": "pool_th_penglin_lxx",
+            "hostname" : "192.168.10.20",
+            "username" : "penglin_9s",
+            "key_filename" : "KEY_PATH",
+            "port" : 22,
+            "max_connections" : 5
+        }
+    },
+    "programList": {
+        "mpiPtrace":{
+            "cmd": "/thfs1/home/penglin_lxx/mst-test/mpiptrace-wk/mpiPtrace-run.sh",
+            "resultList": [
+                {
+                    "name": "mpiPtrace收集到的通信踪迹信息",
+                    "path": "/thfs1/home/penglin_lxx/mst-test/mpiptrace-wk/logwk",
+                    "backPath": "/thfs1/home/penglin_lxx/mst-test/mpiptrace-wk/0-archive/logwk",
+                    "type": "text", 
+                    "content": ""
+                }
+            ]
+        },
+        "TAU":{
+            "cmd": "/thfs1/home/penglin_lxx/mst-test/tau-wk/run.sh",
+            "resultList": [
+                {
+                    "name": "TAU收集到的通信踪迹信息",
+                    "path": "/thfs1/home/penglin_lxx/mst-test/tau-wk/logwk",
+                    "backPath": "/thfs1/home/penglin_lxx/mst-test/tau-wk/0-archive/logwk",
+                    "type": "text", 
+                    "content": ""
+                }
+            ]
+        }
+    },
+    
+    "description": {
+        "考核指标": [
+            "统一的性能监测和调试接口"
+          ],
+          "中期指标": [
+            "指标1.1：提供统一的性能监测和调试接口"
+          ],
+          "完成指标": [
+            "指标1.1：实现统一的迈创国产超算系统性能监测和调试接口"
+          ],
+          "功能简介": [
+            "首先，使用mpiPtrace收集NPB中CG程序的通信踪迹信息",
+            "然后，使用TAU收集NPB中CG程序的通信踪迹信息",
+            "最后，评测mpiPtrace、TAU所收集踪迹信息所占磁盘空间的大小"
+          ],
+          "演示设置": [
+            "演示平台：迈创",
+            "演示规模：256核",
+            "演示应用：基于通信元数据的性能监测工具"
+          ]
+    }
+}

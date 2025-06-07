@@ -1,0 +1,51 @@
+{
+    "id" : "part3_sub4",
+
+    "pool":{
+        "poolName": "pool_hg_wangjh",
+        "ssh":{
+            "poolName": "pool_hg_wangjh",
+            "hostname" : "60.245.128.10",
+            "username" : "wangjh",
+            "key_filename" : "KEY_PATH",
+            "port" : 65010,
+            "max_connections" : 5
+        }
+    },
+
+    "programList": {
+        "海光架构下的轻量级调试接口功能——技术开销轻量级测试":{
+            "cmd": "/work1/wangjh/huyh/ptrace_papi/build_script_bash.sh",
+            "resultList": [
+                {
+                    "name": "方法时间开销",
+                    "path": "/work1/wangjh/huyh/ptrace_papi/out.log",
+                    "backPath": "/work1/wangjh/huyh/ptrace_papi/out_backup.log",
+                    "type": "text", 
+                    "content": ""
+                }
+            ]
+        }
+    },
+    
+    "description": {
+        "考核指标": [
+            "轻量级性能监测与调试技术"
+          ],
+          "中期指标": [
+            "指标2.1：大规模应用并行运行轻量级调试接口"
+          ],
+          "完成指标": [
+            "指标2.1：轻量级调试工具支持千万核以上规模应用并行运行失效问题的快速定位分析，分析时间<5分钟"
+          ],
+          "功能简介": [
+            "演示将依次运行轻量级性能监测与调试及全局进行性能监控与调试，并对比两者运行时间开销",
+            "轻量级性能监测与调试方法在时间上有较明显降低"
+          ],
+          "演示设置": [
+            "演示平台：海光",
+            "演示规模：",
+            "演示应用："
+          ]
+    }
+}

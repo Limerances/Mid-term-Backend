@@ -15,13 +15,13 @@
 
     "programList": {
         "IO模型调优":{
-            "cmd": "cd /thfs3/home/xjtu_cx/AMT-Toolkits/tests/io && python run_2.py",
+            "cmd": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/io/run_3.sh",
             "resultList": [
                 {
-                    "name": "基于性能模型的程序调优结果",
-                    "path": "/thfs3/home/xjtu_cx/AMT-Toolkits/test/io/IOTY-TEST/romio_hints",
-                    "backPath": "/thfs3/home/xjtu_cx/AMT-Toolkits/test/io/IOTY-TEST/romio_hints_backup",
-                    "type": "text", 
+                    "name": "IO分析调优的程序调优结果",
+                    "path": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/io/tests/IO_Tune_Tool/romio-hints",
+                    "backPath": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/io/tests/IO_Tune_Tool/romio-hints_backup",
+                    "type": "text",
                     "content": ""
                 }
 
@@ -40,14 +40,11 @@
           "完成指标": [
             "指标3.1：支持2种不同体系架构的国产超算系统，在 5 个以上典型并行应用程序性能提升不低于 5%（性能提升对比立项时应用程序状态，并确保技术验收时调优后的应用程序性能领先）"
            ],
-
-  	"功能简介": [
-            "首先从科学计算应用I/O负载共性出发，构建I/O基准通用性能模型。",
-            "其次将应用I/O负载映射为IOR参数，用基准通用性能模型实现多种应用的I/O性能预测和调优",
+          "功能简介": [
+            "首先测算特定系统部分参数以及程序IO特征",
+            "然后经过公式推导直接给出调优参数，该方法适用于历史数据较少时，可以保证较好的调优效果，",
             "最终将调优结果写入romio-hints文件，并以调优前后运行程序，对比调优效果"
           ],
-
-         
           "演示设置": [
             "演示平台：迈创",
             "演示规模：256核",

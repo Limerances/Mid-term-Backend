@@ -1,18 +1,25 @@
+### Mac 安装步骤
 
-项目部署
-``` shell
-# 后端框架
+#### 环境安装
+
+```shell
+virtualenv env -p python
 pip install Django
-# 解决CORS问题
 pip install django-cors-headers
-# ssh连接池
 pip install paramiko
-
 pip install pycryptodome
 ```
 
-项目启动
+#### 项目加载
+
+在文件`backend/views.py`中修改`KEY_PATH`为公钥地址
+
+运行
+
+```shell
+python manage.py runserver 0.0.0.0:55001
 ```
-cd 项目目录
-hipo: python manage.py runserver 0.0.0.0:55001
-```
+
+#### 值得关注的文件
+
+`json`文件在`pageinfo`文件夹中
