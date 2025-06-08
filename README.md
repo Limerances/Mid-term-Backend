@@ -4,6 +4,7 @@
 
 ```shell
 virtualenv env -p python
+source env/bin/activate
 pip install Django
 pip install django-cors-headers
 pip install paramiko

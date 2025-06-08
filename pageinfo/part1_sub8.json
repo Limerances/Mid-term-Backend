@@ -1,0 +1,59 @@
+{
+    "id" : "part1_sub8",
+
+    "pool":{
+        "poolName": "pool_th_yanghailong",
+        "ssh":{
+            "poolName": "pool_th_yanghailong",
+            "hostname" : "192.168.10.21",
+            "username" : "yanghailong",
+            "key_filename" : "KEY_PATH",
+            "port" : 22,
+            "max_connections" : 5
+        }
+    },
+
+    "programList": {
+        "MISA-MD":{
+            "cmd": "/thfs3/home/yanghailong/midterm-demo/workdir/GZDW/misa-md/run_analysis.sh",
+            "resultList": [
+                {
+                    "name": "算力故障诊断热力图",
+                    "path": "/thfs3/home/yanghailong/midterm-demo/workdir/GZDW/misa-md/logs/analysis/heatmap/calc.png",
+                    "backPath": "/thfs3/home/yanghailong/midterm-demo/workdir/GZDW/misa-md/logs/analysis/heatmap_backup/calc.png",
+                    "type": "image", 
+                    "content": ""
+                },
+                {
+                    "name": "通信故障诊断热力图",
+                    "path": "/thfs3/home/yanghailong/midterm-demo/workdir/GZDW/misa-md/logs/analysis/heatmap/comm.png",
+                    "backPath": "/thfs3/home/yanghailong/midterm-demo/workdir/GZDW/misa-md/logs/analysis/heatmap_backup/comm.png",
+                    "type": "image",
+                    "content": ""
+                }
+            ]
+        }
+    },
+    
+    "description": {
+        "考核指标": [
+            "指标1.1：常用性能分析功能"
+          ],
+          "中期指标": [
+            "指标1.1：完成常用功能点包括故障定位、热点分析、内存分析、通信分析功能"
+          ],
+          "完成指标": [
+            "指标1.1：支持 2 种不同体系架构的国产超算系统，完成常用功能点包括故障定位、热点分析、内存分析、通信分析、性能轨迹分析和可扩展性瓶检测等（对标国际主流类似软件）"
+          ],
+          "功能简介": [
+            "首先，针对采集到的目标应用性能轨迹原始数据进行故障定位分析，包括算力和通信等故障",
+            "然后，故障定位分析结果包括各进程在各个时间片下（如时间分辨率10ms）的相对性能",
+            "最后，将得到的故障定位分析结果进行可视化展示，便于用户直观了解分析结果"
+          ],
+          "演示设置": [
+            "演示平台：迈创",
+            "演示规模：万核",
+            "演示应用：注入节点性能故障的MisaMD"
+          ]
+    }
+}

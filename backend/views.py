@@ -19,7 +19,8 @@ TEMP_DIR = "tmp"
 if not os.path.exists(TEMP_DIR):
     os.makedirs(TEMP_DIR)
 
-KEY_PATH = '/Users/apple/.ssh/id_rsa.pub'
+# KEY_PATH = '/Users/apple/.ssh/id_rsa.pub'
+KEY_PATH = '/Users/xzbw/.ssh/id_rsa.pub'
 # KEY_PATH = '~/.ssh/id_rsa.pub'
 SERVER_TH = 'yanghailong@192.168.10.21'
 
