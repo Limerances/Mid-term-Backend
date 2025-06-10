@@ -1,0 +1,52 @@
+{
+    "id" : "part2_sub16",
+
+    "pool":{
+        "poolName": "pool_hg_wangjh",
+        "ssh":{
+            "poolName": "pool_hg_wangjh",
+            "hostname" : "60.245.128.10",
+            "username" : "wangjh",
+            "key_filename" : "KEY_PATH",
+            "port" : 65010,
+            "max_connections" : 5
+        }
+    },
+
+    "programList": {
+        "基于PAPI的通用域性能监测接口测试":{
+            "cmd": "/public/home/wangjh/rjcs/verify/re_compile_run_cpu_bash.sh",
+            "resultList": [
+                {
+                    "name": "终端输出",
+                    "path": "/public/home/wangjh/rjcs/verify/output_cpu.txt",
+                    "backPath": "/public/home/wangjh/rjcs/verify/output_cpu_backup.txt",
+                    "type": "text", 
+                    "content": ""
+                }
+            ]
+        }
+    },
+    
+    "description": {
+        "考核指标": [
+            "统一的性能监测和调试接口"
+          ],
+          "中期指标": [
+            "指标1.1：统一的轻量级性能监测和调试接口初步实现"
+          ],
+          "完成指标": [
+            "指标1.1：实现统一的海光国产超算系统性能监测和调试接口，具备支持多层级性能监测功能"
+          ],
+          "功能简介": [
+            "基于PAPI软件接口标准，形成面向海光架构通用域的统一性能监测接口",
+            "通过相应PAPI命令实现对HYGON CPU上性能事件的识别",
+            "使用自带测试用例，演示接口正常采样"
+          ],
+          "演示设置": [
+            "演示平台：海光",
+            "演示规模：",
+            "演示应用："
+          ]
+    }
+}

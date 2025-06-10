@@ -2,26 +2,33 @@
     "id" : "part3_sub2",
 
     "pool":{
-        "poolName": "pool_hg_wangjh",
+        "poolName": "pool_gpu7",
         "ssh":{
-            "poolName": "pool_hg_wangjh",
-            "hostname" : "60.245.128.10",
-            "username" : "wangjh",
+            "poolName": "pool_gpu7",
+            "hostname" : "10.254.46.25",
+            "username" : "huoda",
             "key_filename" : "KEY_PATH",
-            "port" : 65010,
+            "port" : 22,
             "max_connections" : 5
         }
     },
 
     "programList": {
-        "基于PAPI的加速域性能监测接口测试":{
-            "cmd": "/public/home/wangjh/rjcs/verify/run_dcu_job_bash.sh",
+        "性能轨迹分析功能测试":{
+            "cmd": "/home/huoda/run_analysis_xxgj.sh",
             "resultList": [
                 {
-                    "name": "终端输出",
-                    "path": "/public/home/wangjh/rjcs/verify/output_dcu.txt",
-                    "backPath": "/public/home/wangjh/rjcs/verify/output_dcu_backup.txt",
-                    "type": "text", 
+                    "name": "MisaMD-8节点 异常热力图",
+                    "path": "/home/huoda/medium-term-demo/xxgj_misa8_4/figures/misa8_dur=1ms_seq=30_lr=0.001_bsz=16_hdim=8_dim=8_score_epoch=5.png",
+                    "backPath": "/home/huoda/medium-term-demo/xxgj_misa8_4_static/misa8_dur=1ms_seq=30_lr=0.001_bsz=16_hdim=8_dim=8_score_epoch=5.png",
+                    "type": "image", 
+                    "content": ""
+                },
+                {
+                    "name": "MisaMD-8节点 性能异常分析结果",
+                    "path": "/home/huoda/medium-term-demo/xxgj_misa8_4/tree/misa8_dur=1ms_seq=30_lr=0.001_bsz=16_hdim=8_dim=8_score_epoch=5_3_kernel.png",
+                    "backPath": "/home/huoda/medium-term-demo/xxgj_misa8_4_static/misa8_dur=1ms_seq=30_lr=0.001_bsz=16_hdim=8_dim=8_score_epoch=5_3_kernel.png",
+                    "type": "image",
                     "content": ""
                 }
             ]
@@ -29,24 +36,27 @@
     },
     
     "description": {
-        "考核指标": [
-            "统一的性能监测和调试接口"
+          "考核指标": [
+            "实现千万核以上规模应用的性能分析，能够识别并行程序性能瓶颈并提出有效的优化建议"
           ],
           "中期指标": [
-            "指标1.1：统一的轻量级性能监测和调试接口初步实现"
+            "实现千万核以上规模应用的性能分析，能够识别并行程序性能瓶颈并提出有效的优化建议"
           ],
           "完成指标": [
-            "指标1.1：实现统一的海光国产超算系统性能监测和调试接口，具备支持多层级性能监测功能"
+            "支持2种不同体系架构的国产超算系统",
+            "实现千万核以上规模应用的性能分析",
+            "能够识别并行程序性能瓶颈并提出有效的优化建议",
+            "根据分析工具提出的建议进行优化后的性能达到用户手工优化方法的90%"
           ],
           "功能简介": [
-            "基于PAPI软件接口标准，形成面向海光架构加速域的统一性能监测接口",
-            "通过相应PAPI命令实现对HYGON DCU上性能事件的识别",
-            "使用提供的测试用例，演示接口正常采样"
+            "首先，将采集得到的性能轨迹数据按照固定时间段进行剪切得到轨迹数据流", 
+            "然后，利用图神经网络训练性能轨迹数据流，生成各个节点在不同时间片下的异常分数",
+            "最后，根据推理结果绘制异常热力图，同时结合回溯信息定位到性能异常的位置，实现故障定位分析功能"
           ],
           "演示设置": [
-            "演示平台：海光",
-            "演示规模：",
-            "演示应用："
+            "演示平台：gpu7",
+            "演示规模：8节点",
+            "演示应用：MisaMD"
           ]
     }
 }

@@ -1,0 +1,52 @@
+{
+    "id" : "part3_sub6",
+
+    "pool":{
+        "poolName": "pool_th_yanghailong",
+        "ssh":{
+            "poolName": "pool_th_yanghailong",
+            "hostname" : "192.168.10.21",
+            "username" : "yanghailong",
+            "key_filename" : "KEY_PATH",
+            "port" : 22,
+            "max_connections" : 5
+        }
+    },
+
+    "programList": {
+        "misa-md":{
+            "cmd": "/thfs3/home/yanghailong/workdir/DXXW-TEST/misa-md/run_analysis.sh",
+            "resultList": [
+                {
+                    "name": "低效行为报告",
+                    "path": "/thfs3/home/yanghailong/workdir/DXXW-TEST/misa-md/logs/analysis/DXXW.log",
+                    "backPath": "/thfs3/home/yanghailong/workdir/DXXW-TEST/misa-md/logs/analysis/DXXW_.log",
+                    "type": "text", 
+                    "content": ""
+                }
+            ]
+        }
+    },
+    
+    "description": {
+        "考核指标": [
+            "扩展性能分析功能"
+          ],
+          "中期指标": [
+            "指标2.1：完成面向国产高性能计算机的大规模并行程序低效行为检测功能"
+          ],
+          "完成指标": [
+            "指标2.1：支持2种不同体系架构的国产超算系统，完成面向国产高性能计算机的大规模并行程序低效行为检测功能" 
+          ],
+          "功能简介": [
+            "首先，分析目标应用程序识别高潜力零值指令",
+            "然后，针对高潜力零值指令插桩，在运行时收集指令的零值信息",
+            "最后，分析目标应用程序的零值模式并按照冗余程度排序，生成零值冗余报告"
+          ],
+          "演示设置": [
+            "演示平台：迈创",
+            "演示规模：万核",
+            "演示应用：misa-md"
+          ]
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id" : "part2_sub10",
+
+    "pool":{
+        "poolName": "pool_th_xjtu_cx",
+        "ssh":{
+            "poolName": "pool_th_xjtu_cx",
+            "hostname" : "192.168.10.20",
+            "username" : "xjtu_cx",
+            "key_filename" : "KEY_PATH",
+            "port" : 22,
+            "max_connections" : 5
+        }
+    },
+
+    "programList": {
+        "IO建模":{
+            "cmd": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/io/run_1.sh",
+            "resultList": [
+                {
+                    "name": "程序性能数据采集",
+                    "path": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/io/tests/IOJM-TEST/lammps.csv",
+                    "backPath": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/io/tests/IOJM-TEST/lammps_backup.csv",
+                    "type": "text", 
+                    "content": ""
+                },
+                {
+                    "name": "程序性能预测散点图",
+                    "path": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/io/tests/IOJM-TEST/true_vs_predicted_lammps.png",
+                    "backPath": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/io/tests/IOJM-TEST/true_vs_predicted_lammps_backup.png",
+                    "type": "image",
+                    "content": ""
+                }
+            ]
+        }
+    },
+    
+    "description": {
+        "考核指标": [
+            "具备迈创平台I/O性能自动建模功能"
+           ],
+          "中期指标": [
+            "指标2.1：具备部分功能的原型系统"
+          ],
+          "完成指标": [
+            "指标2.1：支持2种不同体系架构的国产超算系统，具有计算性能、通信性能 、访存性能、 I/O 性能等自动建模功能"
+           ],
+          "功能简介": [
+            "首先从科学计算应用I/O负载共性出发，提出了I/O基准通用性能模型。",
+            "该性能模型将应用I/O负载映射为IOR参数，用基准通用性能模型实现多种应用的I/O性能预测和调优，调优成本为一次性的",
+            "最终针对LAMMPS进行I/O性能预测，输出预测值和真实值对比的散点图以及模型"
+          ],
+          "演示设置": [
+            "演示平台：迈创",
+            "演示规模：256核",
+            "演示应用：LAMMPS"
+          ]
+    }
+}

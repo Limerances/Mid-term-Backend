@@ -1,0 +1,60 @@
+{
+    "id" : "part2_sub9",
+
+    "pool":{
+        "poolName": "pool_th_xjtu_cx",
+        "ssh":{
+            "poolName": "pool_th_xjtu_cx",
+            "hostname" : "192.168.10.20",
+            "username" : "xjtu_cx",
+            "key_filename" : "KEY_PATH",
+            "port" : 22,
+            "max_connections" : 5
+        }
+    },
+
+    "programList": {
+        "通信调优":{
+            "cmd": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/comm/N-Hop/nhop_tune_test.sh -p 1",
+            "resultList": [
+                {
+                    "name": "调优前程序性能数据",
+                    "path": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/comm/N-Hop/results/origin.log",
+                    "backPath": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/comm/N-Hop/results/origin.log.bak",
+                    "type": "text", 
+                    "content": ""
+                },
+                {
+                    "name": "调优后程序性能数据",
+                    "path": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/comm/N-Hop/results/tuned.log",
+                    "backPath": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/comm/N-Hop/results/tuned.log.bak",
+                    "type": "text",
+                    "content": ""
+                }
+            ]
+        }
+    },
+    
+    "description": {
+        "考核指标": [
+            "具备天河平台集合通信自动调优功能"
+           ],
+          "中期指标": [
+            "指标3.1：具备部分功能的原型系统"
+          ],
+          "完成指标": [
+            "指标3.1：支持2种不同体系架构的国产超算系统，在 5 个以上典型并行应用程序性能提升不低于 5%（性能提升对比立项时应用程序状态，并确保技术验收时调优后的应用程序性能领先）"
+           ],
+          "功能简介": [
+            "首先，将程序运行时的配置作为可变参数输入模型",
+            "其次，通过性能模型的预测结果，获取最优通信算法，指导调优",
+            "最后，运行原始MISA-MD程序和使用模型生成算法选择文件运行MISA-MD程序，对比程序运行性能",
+            "通信调优，使用典型应用MISA-MD进行评测，性能指标计算方法是：程序性能提升=（|调优后程序性能-调优前程序性能|）/调优前程序性能"
+          ],
+          "演示设置": [
+            "演示平台：迈创",
+            "演示规模：256核",
+            "演示应用：MISA-MD"
+          ]
+    }
+}

@@ -2,26 +2,33 @@
     "id" : "part3_sub5",
 
     "pool":{
-        "poolName": "pool_hg_wangjh",
+        "poolName": "pool_gpu7",
         "ssh":{
-            "poolName": "pool_hg_wangjh",
-            "hostname" : "60.245.128.10",
-            "username" : "wangjh",
+            "poolName": "pool_gpu7",
+            "hostname" : "10.254.46.25",
+            "username" : "huoda",
             "key_filename" : "KEY_PATH",
-            "port" : 65010,
+            "port" : 22,
             "max_connections" : 5
         }
     },
 
     "programList": {
-        "海光架构下的轻量级调试接口功能——程序挂起检测":{
-            "cmd": "/work1/wangjh/huyh/ptrace_papi/build_script_bash.sh",
+        "可拓展性瓶颈检测功能测试":{
+            "cmd": "/home/huoda/run_analysis_ktzx.sh",
             "resultList": [
                 {
-                    "name": "异常进程及异常PC值",
-                    "path": "/work1/wangjh/huyh/ptrace_project2/new_slurmlog/ptrace.log",
-                    "backPath": "/work1/wangjh/huyh/ptrace_project2/new_slurmlog/ptrace.14909978.log",
-                    "type": "text", 
+                    "name": "MisaMD-4节点 可扩展性可视化结果",
+                    "path": "/home/huoda/medium-term-demo/ktzx_misa4_4/tree/misamd4_dur=5_seq=30_lr=0.001_bsz=32_hdim=8_dim=8_score_epoch=5_3_kernel.png",
+                    "backPath": "/home/huoda/medium-term-demo/ktzx_misa_static/misamd4_dur=5_seq=30_lr=0.001_bsz=32_hdim=8_dim=8_score_epoch=5_3_kernel.png",
+                    "type": "image", 
+                    "content": ""
+                },
+                {
+                    "name": "MisaMD-50节点 可扩展性可视化结果",
+                    "path": "/home/huoda/medium-term-demo/ktzx_misa50_4/tree/misamd50_dur=1_seq=30_lr=0.001_bsz=8_hdim=8_dim=8_score_epoch=3_3_kernel.png",
+                    "backPath": "/home/huoda/medium-term-demo/ktzx_misa_static/misamd50_dur=1_seq=30_lr=0.001_bsz=8_hdim=8_dim=8_score_epoch=3_3_kernel.png",
+                    "type": "image",
                     "content": ""
                 }
             ]
@@ -29,23 +36,27 @@
     },
     
     "description": {
-        "考核指标": [
-            "运行失效定位"
+          "考核指标": [
+            "实现千万核以上规模应用的可扩展性瓶颈检测，能够识别并行程序性能瓶颈并提出有效的优化建议"
           ],
           "中期指标": [
-            "指标2.1：大规模应用并行运行轻量级调试接口"
+            "实现千万核以上规模应用的可扩展性瓶颈检测，能够识别并行程序性能瓶颈并提出有效的优化建议"
           ],
           "完成指标": [
-            "指标2.1：轻量级调试工具支持千万核以上规模应用并行运行失效问题的快速定位分析，分析时间<5分钟"
+            "支持2种不同体系架构的国产超算系统",
+            "实现千万核以上规模应用的性能分析",
+            "能够识别并行程序性能瓶颈并提出有效的优化建议",
+            "根据分析工具提出的建议进行优化后的性能达到用户手工优化方法的90%"
           ],
           "功能简介": [
-            "演示针对异常挂起场景，通过故障注入的方式模拟故障在实际运行中的发生情况",
-            "异常进程可以被识别，并报告异常进程PC值"
+            "首先，根据收集到的性能轨迹数据建立程序行为图", 
+            "然后，对两个不同规模的程序行为图进行差异性分析，获取异常点",
+            "最后，从异常点出发进行回溯根因诊断"
           ],
           "演示设置": [
-            "演示平台：海光",
-            "演示规模：",
-            "演示应用："
+            "演示平台：gpu7",
+            "演示规模：4节点、50节点",
+            "演示应用：MisaMD"
           ]
     }
 }

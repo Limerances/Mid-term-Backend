@@ -2,26 +2,26 @@
     "id" : "part3_sub3",
 
     "pool":{
-        "poolName": "pool_hg_wangjh",
+        "poolName": "pool_th_yanghailong",
         "ssh":{
-            "poolName": "pool_hg_wangjh",
-            "hostname" : "60.245.128.10",
-            "username" : "wangjh",
+            "poolName": "pool_th_yanghailong",
+            "hostname" : "192.168.10.21",
+            "username" : "yanghailong",
             "key_filename" : "KEY_PATH",
-            "port" : 65010,
+            "port" : 22,
             "max_connections" : 5
         }
     },
 
     "programList": {
-        "海光架构下的轻量级调试接口功能——程序调试信息获取":{
-            "cmd": "/work1/wangjh/huyh/ptrace_project_func_test/run.sh",
+        "通信分析":{
+            "cmd": "/thfs3/home/yanghailong/midterm-demo/workdir/TXFX-TEST/run_analysis.sh",
             "resultList": [
                 {
-                    "name": "函数调用栈信息",
-                    "path": "/work1/wangjh/huyh/ptrace_project_func_test/build/output/callstack.txt",
-                    "backPath": "/work1/wangjh/huyh/ptrace_project_func_test/build/output/输出-90519.txt",
-                    "type": "text", 
+                    "name": "通信热力图",
+                    "path": "/thfs3/home/yanghailong/workdir/TXFX-TEST/heatmap.png",
+                    "backPath": "/thfs3/home/yanghailong/workdir/TXFX-TEST/heatmap_backup.png",
+                    "type": "image", 
                     "content": ""
                 }
             ]
@@ -30,22 +30,23 @@
     
     "description": {
         "考核指标": [
-            "轻量级性能监测与调试技术"
+            "完成常用功能点通信分析"
           ],
           "中期指标": [
-            "指标2.1：大规模应用并行运行轻量级调试接口"
+            "指标1.1：完成通信分析常用功能点"
           ],
           "完成指标": [
-            "指标2.1：轻量级调试工具支持千万核以上规模应用并行运行失效问题的快速定位分析，分析时间<5分钟"
+            "指标1.1：完成通信分析常用功能点，支持两种不同体系架构的国产超算系统"
           ],
           "功能简介": [
-            "基于ELF和DWARF信息实现堆栈展开，设计高效的堆栈展开和回溯方法，实现对函数的调用栈分析",
-            "可以获取函数调用路径和函数被调用行号信息，为挂起检测提供了数据来源"
+            "首先将待分析的MPI性能轨迹数据作为输入",
+            "然后运行通信分析命令，对MPI性能轨迹数据中的MPI性能事件进行分析",
+            "最后，等待运行完毕可以查看程序进程通信热力图"
           ],
           "演示设置": [
-            "演示平台：海光",
-            "演示规模：",
-            "演示应用："
+            "演示平台：迈创",
+            "演示规模：万核",
+            "演示应用：MISA-MD"
           ]
     }
 }

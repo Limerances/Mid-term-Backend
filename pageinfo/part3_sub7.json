@@ -1,5 +1,5 @@
 {
-    "id" : "part3_sub4",
+    "id" : "part3_sub7",
 
     "pool":{
         "poolName": "pool_th_yanghailong",
@@ -15,19 +15,19 @@
 
     "programList": {
         "MISA-MD":{
-            "cmd": "/thfs3/home/yanghailong/midterm-demo/workdir/ZYJC/misa-md/run_analysis.sh",
+            "cmd": "/thfs3/home/yanghailong/midterm-demo/workdir/GZDW/misa-md/run_analysis.sh",
             "resultList": [
                 {
-                    "name": "计算噪音热力图",
-                    "path": "/thfs3/home/yanghailong/midterm-demo/workdir/ZYJC/misa-md/logs/analysis/heatmap/calc.png",
-                    "backPath": "/thfs3/home/yanghailong/midterm-demo/workdir/ZYJC/misa-md/logs/analysis/heatmap_backup/calc.png",
+                    "name": "算力故障诊断热力图",
+                    "path": "/thfs3/home/yanghailong/midterm-demo/workdir/GZDW/misa-md/logs/analysis/heatmap/calc.png",
+                    "backPath": "/thfs3/home/yanghailong/midterm-demo/workdir/GZDW/misa-md/logs/analysis/heatmap_backup/calc.png",
                     "type": "image", 
                     "content": ""
                 },
                 {
-                    "name": "通信噪音热力图",
-                    "path": "/thfs3/home/yanghailong/midterm-demo/workdir/ZYJC/misa-md/logs/analysis/heatmap/comm.png",
-                    "backPath": "/thfs3/home/yanghailong/midterm-demo/workdir/ZYJC/misa-md/logs/analysis/heatmap_backup/comm.png",
+                    "name": "通信故障诊断热力图",
+                    "path": "/thfs3/home/yanghailong/midterm-demo/workdir/GZDW/misa-md/logs/analysis/heatmap/comm.png",
+                    "backPath": "/thfs3/home/yanghailong/midterm-demo/workdir/GZDW/misa-md/logs/analysis/heatmap_backup/comm.png",
                     "type": "image",
                     "content": ""
                 }
@@ -37,13 +37,13 @@
     
     "description": {
         "考核指标": [
-            "指标1.2：扩展性能分析功能"
+            "指标1.1：常用性能分析功能"
           ],
           "中期指标": [
-            "指标1.2：完成面向国产高性能计算机的大规模并行程序噪音检测、低效行为检测功能"
+            "指标1.1：完成常用功能点包括故障定位、热点分析、内存分析、通信分析功能"
           ],
           "完成指标": [
-            "指标1.2：支持 2 种不同体系架构的国产超算系统，完成面向国产高性能计算机的大规模并行程序噪音检测、低效行为检测和性能抖动识别等新增功能"
+            "指标1.1：支持 2 种不同体系架构的国产超算系统，完成常用功能点包括故障定位、热点分析、内存分析、通信分析、性能轨迹分析和可扩展性瓶检测等（对标国际主流类似软件）"
           ],
           "功能简介": [
             "首先，针对采集到的目标应用性能轨迹原始数据进行故障定位分析，包括算力和通信等故障",
@@ -53,7 +53,7 @@
           "演示设置": [
             "演示平台：迈创",
             "演示规模：万核",
-            "演示应用：注入节点噪音的MisaMD"
+            "演示应用：注入节点性能故障的MisaMD"
           ]
     }
 }

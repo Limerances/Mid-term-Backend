@@ -1,5 +1,5 @@
 {
-    "id" : "part1_sub8",
+    "id" : "part3_sub9",
 
     "pool":{
         "poolName": "pool_hg_wangxg",
@@ -14,21 +14,21 @@
     },
 
     "programList": {
-        "IOP 采集功能":{
-            "cmd": "/public/home/wangxg/work1/guoshanchuan/MISA-MD-develop/example/IOP1.sh",
+        "I/O诊断功能":{
+            "cmd": "/public/home/wangxg/work1/niujian/ParaDiS-main/IOP2.sh",
             "resultList": [
                 {
-                    "name": "压缩存储的性能数据格式(二进制）",
-                    "path": "/public/home/wangxg/work1/guoshanchuan/MISA-MD-develop/example/md-cur.log",
-                    "backPath": "/public/home/wangxg/work1/guoshanchuan/MISA-MD-develop/example/backpath/mpi_iomsg.txt",
-                    "type": "text", 
+                    "name": "I/O请求大小和频率分布直方图",
+                    "path": "/public/home/wangxg/work1/niujian/ParaDiS-main/io_analysis_output/request_size_distribution.png",
+                    "backPath": "/public/home/wangxg/work1/niujian/ParaDiS-main/backpath/request_size_distribution.png",
+                    "type": "image", 
                     "content": ""
                 },
                 {
-                    "name": "json格式的性能数据记录",
-                    "path": "/public/home/wangxg/work1/guoshanchuan/MISA-MD-develop/example/io_timeline.json",
-                    "backPath": "/public/home/wangxg/work1/guoshanchuan/MISA-MD-develop/example/backpath/io_timeline.json",
-                    "type": "text",
+                    "name": "I/O请求大小分布图",
+                    "path": "/public/home/wangxg/work1/niujian/ParaDiS-main/io_analysis_output/size_duration_relationship.png",
+                    "backPath": "/public/home/wangxg/work1/niujian/ParaDiS-main/backpath/size_duration_relationship.png",
+                    "type": "image", 
                     "content": ""
                 }
             ]
@@ -46,7 +46,7 @@
             "指标3.1：形成千万核以上规模应用的 I/O 性能诊断工具、I/O 通信性能诊断工具与I/O 预测工具"
           ],
           "功能简介": [
-            "进行多层次细粒度的I/O性能与通信性能采集"
+            "2.对DDD程序进行小文件I/O瓶颈问题检测"
           ],
           "演示设置": [
             "演示平台：419",

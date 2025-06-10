@@ -14,15 +14,29 @@
     },
 
     "programList": {
-        "统一接口技术功能":{
-            "cmd": "/thfs3/home/yanghailong/midterm-demo/workdir/TYJK/run_tyjk.sh",
+        "Sampling 性能事件采样及读取":{
+            "cmd": "/public/home/buaa_hipo/measurement/zzz_samp/mid_run.sh",
             "resultList": [
                 {
-                    "name": "kernel信息",
-                    "path": "/thfs3/home/yanghailong/midterm-demo/workdir/TYJK/readable/ext.0.00",
-                    "backPath": "/thfs3/home/yanghailong/midterm-demo/workdir/TYJK/ext.0.00",
+                    "name": "MPI 读取结果",
+                    "path": "/public/home/buaa_hipo/measurement/zzz_samp/read/result_1000.0",
+                    "backPath": "/public/home/buaa_hipo/measurement/zzz_samp/result_1000_back.0",
                     "type": "text", 
                     "content": ""
+                },
+                {
+                  "name": "SAMPLING 读取结果",
+                  "path": "/public/home/buaa_hipo/measurement/zzz_samp/read/sampling_res.0",
+                  "backPath": "/public/home/buaa_hipo/measurement/zzz_samp/sampling_res_back.0",
+                  "type": "text", 
+                  "content": ""
+                },
+                {
+                  "name": "ACCL 读取结果",
+                  "path": "/public/home/buaa_hipo/measurement/zzz_samp/read/ext.0",
+                  "backPath": "/public/home/buaa_hipo/measurement/zzz_samp/ext_back.0",
+                  "type": "text", 
+                  "content": ""
                 }
             ]
         }
@@ -36,13 +50,13 @@
             "指标1.1 统一接口子模块实现了性能数据采集的功能，支持两种不同体系架构的国产超算系统"
           ],
           "完成指标": [
-            "指标1.1 统一接口子模块实现了性能数据采集的功能，支持两种不同体系架构的国产超算系统"
+            "指标1.1 统一接口子模块实现了性能数据采集的功能，支持两种不同体系架构的国产超算系统" 
           ],
           "功能简介": [
-            "采集应用性能轨迹，并展示可读的轨迹文件"
+            "采集国产超算系统上应用的性能事件数据以及性能轨迹，并对性能事件数据进行读取收集"
           ],
           "演示设置": [
-            "演示平台：迈创",
+            "演示平台：东方",
             "演示规模：万核",
             "演示应用：MISA-MD"
           ]

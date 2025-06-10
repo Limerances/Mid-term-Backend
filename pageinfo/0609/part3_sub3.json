@@ -1,5 +1,5 @@
 {
-    "id" : "part2_sub2",
+    "id" : "part3_sub3",
 
     "pool":{
         "poolName": "pool_hg_wangjh",
@@ -14,13 +14,13 @@
     },
 
     "programList": {
-        "海光架构下的轻量级调试接口功能——技术开销轻量级测试":{
-            "cmd": "/work1/wangjh/huyh/ptrace_papi/build_script_bash.sh",
+        "海光架构下的轻量级调试接口功能——程序调试信息获取":{
+            "cmd": "/work1/wangjh/huyh/ptrace_project_func_test/run.sh",
             "resultList": [
                 {
-                    "name": "方法时间开销",
-                    "path": "/work1/wangjh/huyh/ptrace_papi/out.log",
-                    "backPath": "/work1/wangjh/huyh/ptrace_papi/out_backup.log",
+                    "name": "函数调用栈信息",
+                    "path": "/work1/wangjh/huyh/ptrace_project_func_test/build/output/callstack.txt",
+                    "backPath": "/work1/wangjh/huyh/ptrace_project_func_test/build/output/输出-90519.txt",
                     "type": "text", 
                     "content": ""
                 }
@@ -39,8 +39,8 @@
             "指标2.1：轻量级调试工具支持千万核以上规模应用并行运行失效问题的快速定位分析，分析时间<5分钟"
           ],
           "功能简介": [
-            "演示将依次运行轻量级性能监测与调试及全局进行性能监控与调试，并对比两者运行时间开销",
-            "轻量级性能监测与调试方法在时间上有较明显降低"
+            "基于ELF和DWARF信息实现堆栈展开，设计高效的堆栈展开和回溯方法，实现对函数的调用栈分析",
+            "可以获取函数调用路径和函数被调用行号信息，为挂起检测提供了数据来源"
           ],
           "演示设置": [
             "演示平台：海光",

@@ -1,5 +1,5 @@
 {
-    "id" : "part1_sub9",
+    "id" : "part1_sub7",
 
     "pool":{
         "poolName": "pool_th_yanghailong",
@@ -14,13 +14,13 @@
     },
 
     "programList": {
-        "内存分析":{
-            "cmd": "/thfs3/home/yanghailong/midterm-demo/workdir/SJTQ-TEST/run_extract.sh",
+        "统一接口技术功能":{
+            "cmd": "/thfs3/home/yanghailong/midterm-demo/workdir/TYJK/run_tyjk.sh",
             "resultList": [
                 {
-                    "name": "数据提取结果",
-                    "path": "/thfs3/home/yanghailong/midterm-demo/workdir/SJTQ-TEST/misa-md/logs/extract/extract.misa_md.report/result.0",
-                    "backPath": "/thfs3/home/yanghailong/midterm-demo/workdir/SJTQ-TEST/misa-md/logs/extract/extract.misa_md.report.bak/result.0",
+                    "name": "kernel信息",
+                    "path": "/thfs3/home/yanghailong/midterm-demo/workdir/TYJK/readable/ext.0.00",
+                    "backPath": "/thfs3/home/yanghailong/midterm-demo/workdir/TYJK/ext.0.00",
                     "type": "text", 
                     "content": ""
                 }
@@ -30,16 +30,16 @@
     
     "description": {
         "考核指标": [
-            "常用性能分析功能"
+            "统一接口子模块实现了性能数据采集的功能"
           ],
           "中期指标": [
-            "指标1.1：完成常用功能点"
+            "指标1.1 统一接口子模块实现了性能数据采集的功能，支持两种不同体系架构的国产超算系统"
           ],
           "完成指标": [
-            "指标1.1：完成常用功能点，支持两种不同体系架构的国产超算系统"
+            "指标1.1 统一接口子模块实现了性能数据采集的功能，支持两种不同体系架构的国产超算系统"
           ],
           "功能简介": [
-            "对采集的性能轨迹数据进行统一性能数据提取"
+            "采集应用性能轨迹，并展示可读的轨迹文件"
           ],
           "演示设置": [
             "演示平台：迈创",
