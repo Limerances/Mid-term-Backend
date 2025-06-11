@@ -13,15 +13,11 @@ class SSHConnectionPool:
         self.max_connections = max_connections
         self.pool = Queue(maxsize=max_connections)
         self.lock = threading.Lock()
-
+        
         # 初始化连接池
         for _ in range(max_connections):
             self._create_connection()
-        
-        # 启动心跳机制
-        print(f"{username}@{hostname} 心跳启动")
-        self.start_heartbeat(interval=60)
-
+    
     def _create_connection(self):
         """创建新的SSH连接"""
         try:
@@ -34,13 +30,10 @@ class SSHConnectionPool:
                 key_filename=self.key_filename,
                 port=self.port
             )
-            # 开启底层 TCP KeepAlive
-            client.get_transport().set_keepalive(30)
-            
             self.pool.put(client)
         except Exception as e:
             print(f"创建SSH连接失败: {str(e)}")
-
+    
     def get_connection(self):
         """从连接池获取一个连接"""
         try:
@@ -54,7 +47,7 @@ class SSHConnectionPool:
         except Exception as e:
             print(f"获取SSH连接失败: {str(e)}")
             return None
-
+    
     def return_connection(self, client):
         """将连接返回池中"""
         if client and self._is_connection_alive(client):
@@ -62,15 +55,15 @@ class SSHConnectionPool:
         else:
             with self.lock:
                 self._create_connection()
-
+    
     def _is_connection_alive(self, client):
         """检查连接是否仍然有效"""
         try:
-            client.exec_command('echo "test"', timeout=2)
+            client.exec_command('echo "test"', timeout=1)
             return True
         except:
             return False
-
+    
     def close_all(self):
         """关闭所有连接"""
         while not self.pool.empty():
@@ -80,24 +73,25 @@ class SSHConnectionPool:
             except:
                 pass
 
-    def start_heartbeat(self, interval=60):
-        """定期保持连接活跃"""
-        def heartbeat():
-            while True:
-                with self.lock:
-                    temp_clients = []
-                    while not self.pool.empty():
-                        client = self.pool.get()
-                        try:
-                            client.exec_command('echo "heartbeat"', timeout=2)
-                        except Exception as e:
-                            print(f"{self.username}@{self.hostname} 心跳失败，重建连接")
-                            client.close()
-                            self._create_connection()
-                            continue
-                        temp_clients.append(client)
-                    for c in temp_clients:
-                        self.pool.put(c)
-                time.sleep(interval)
+# 使用示例
+"""
+# 创建连接池
+pool = SSHConnectionPool(
+    hostname='your_host',
+    username='your_username',
+    password='your_password',  # 或者使用 key_filename
+    max_connections=5
+)
 
-        threading.Thread(target=heartbeat, daemon=True).start()
+# 使用连接
+try:
+    client = pool.get_connection()
+    stdin, stdout, stderr = client.exec_command('your_command')
+    result = stdout.read().decode()
+    print(result)
+finally:
+    pool.return_connection(client)
+
+# 程序结束时关闭所有连接
+pool.close_all()
+""" 
