@@ -13,6 +13,11 @@
         }
     },
 
+    "info":{
+        "title":"IO建模",
+        "origin_id":"part4_sub6"
+    },
+
     "programList": {
         "IO建模":{
             "cmd": "/thfs3/home/xjtu_cx/AMT-Toolkits/tests/io/run_1.sh",
@@ -52,7 +57,7 @@
           ],
           "演示设置": [
             "演示平台：迈创",
-            "演示规模：256核",
+            "演示规模：16节点 1024核",
             "演示应用：LAMMPS"
           ]
     }

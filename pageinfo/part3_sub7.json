@@ -13,6 +13,11 @@
         }
     },
 
+    "info":{
+        "title":"故障定位",
+        "origin_id":"part1_sub8"
+    },
+
     "programList": {
         "MISA-MD":{
             "cmd": "/thfs3/home/yanghailong/midterm-demo/workdir/GZDW/misa-md/run_analysis.sh",
@@ -52,8 +57,8 @@
           ],
           "演示设置": [
             "演示平台：迈创",
-            "演示规模：万核",
-            "演示应用：注入节点性能故障的MisaMD"
+            "演示规模：10节点 40DSP 16480核",
+            "演示应用：注入节点性能故障的MISA-MD"
           ]
     }
 }

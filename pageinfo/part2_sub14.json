@@ -1,5 +1,5 @@
 {
-    "id" : "part2_sub2",
+    "id" : "part2_sub14",
 
     "pool":{
         "poolName": "pool_th_penglin_lxx",
@@ -12,6 +12,13 @@
             "max_connections" : 5
         }
     },
+
+    "info":{
+        "title":"轻量级性能监测技术",
+        "origin_id":"part2_sub2"
+    },
+
+
     "programList": {
         "mpiPtrace":{
             "cmd": "/thfs1/home/penglin_lxx/mst-test/mpiptrace-wk/mpiPtrace-run.sh",
@@ -56,7 +63,7 @@
           ],
           "演示设置": [
             "演示平台：迈创",
-            "演示规模：256核",
+            "演示规模：16节点 256核",
             "演示应用：基于通信元数据的性能监测工具"
           ]
     }

@@ -13,6 +13,11 @@
         }
     },
 
+    "info":{
+        "title":"计算性能自动调优",
+        "origin_id":"part4_sub3"
+    },
+
     "programList": {
         "计算性能自动调优":{
          "cmd": "/work1/dtune/AMT-Toolkits/tests/compute/adtuner_test.sh",
@@ -63,7 +68,7 @@
           ],
           "演示设置": [
             "演示平台：海光",
-            "演示规模：2节点8DCU卡512核",
+            "演示规模：2节点 8DCU 2112核",
             "演示应用：X-BLUE"
           ]
     }

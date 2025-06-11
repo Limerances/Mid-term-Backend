@@ -14,6 +14,11 @@
         }
     },
 
+    "info":{
+        "title":"高效数据表示",
+        "origin_id":"part1_sub6"
+    },
+
     "programList": {
         "misa-md":{
             "cmd": "/thfs3/home/yanghailong/workdir/SJBS-TEST/misa-md/run.sh",
@@ -44,8 +49,8 @@
           ],
           "演示设置": [
             "演示平台：迈创",
-            "演示规模：万核",
-            "演示应用：misa-md"
+            "演示规模：50节点 200DSP 82400核",
+            "演示应用：MISA-MD"
           ]
     }
 }

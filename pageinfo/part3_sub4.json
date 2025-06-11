@@ -13,6 +13,11 @@
         }
     },
 
+    "info":{
+        "title":"噪音检测",
+        "origin_id":"part1_sub9"
+    },
+
     "programList": {
         "MISA-MD":{
             "cmd": "/thfs3/home/yanghailong/midterm-demo/workdir/ZYJC/misa-md/run_analysis.sh",
@@ -52,8 +57,8 @@
           ],
           "演示设置": [
             "演示平台：迈创",
-            "演示规模：万核",
-            "演示应用：注入节点噪音的MisaMD"
+            "演示规模：50节点 200DSP 82400核",
+            "演示应用：注入节点噪音的MISA-MD"
           ]
     }
 }

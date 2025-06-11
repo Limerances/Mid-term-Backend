@@ -13,6 +13,11 @@
         }
     },
 
+    "info":{
+        "title":"IOP 采集功能",
+        "origin_id":"part5_sub1"
+    },
+
     "programList": {
         "IOP 采集功能":{
             "cmd": "/public/home/wangxg/work1/guoshanchuan/MISA-MD-develop/example/IOP1.sh",
@@ -50,7 +55,7 @@
           ],
           "演示设置": [
             "演示平台：419",
-            "演示规模：96核",
+            "演示规模：3节点 3DCU 864核",
             "演示应用：IOP"
           ]
     }

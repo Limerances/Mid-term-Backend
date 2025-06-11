@@ -13,6 +13,11 @@
         }
     },
 
+    "info":{
+        "title":"程序挂起监测",
+        "origin_id":"part3_sub5"
+    },
+
     "programList": {
         "海光架构下的轻量级调试接口功能——程序挂起检测":{
             "cmd": "/work1/wangjh/huyh/ptrace_papi/build_script_bash.sh",
@@ -44,8 +49,8 @@
           ],
           "演示设置": [
             "演示平台：海光",
-            "演示规模：",
-            "演示应用："
+            "演示规模：4节点 16DCU 4224核",
+            "演示应用：基础矩阵乘运算程序"
           ]
     }
 }

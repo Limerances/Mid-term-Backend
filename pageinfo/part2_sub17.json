@@ -13,6 +13,11 @@
         }
     },
 
+    "info":{
+        "title":"加速域性能监测接口测试",
+        "origin_id":"part3_sub2"
+    },
+
     "programList": {
         "基于PAPI的加速域性能监测接口测试":{
             "cmd": "/public/home/wangjh/rjcs/verify/run_dcu_job_bash.sh",
@@ -45,8 +50,8 @@
           ],
           "演示设置": [
             "演示平台：海光",
-            "演示规模：",
-            "演示应用："
+            "演示规模：1节点 1DCU 288核",
+            "演示应用：PAPI加速域接口测试程序"
           ]
     }
 }

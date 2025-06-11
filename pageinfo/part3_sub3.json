@@ -13,6 +13,11 @@
         }
     },
 
+    "info":{
+        "title":"通信分析",
+        "origin_id":"part1_sub12"
+    },
+
     "programList": {
         "通信分析":{
             "cmd": "/thfs3/home/yanghailong/midterm-demo/workdir/TXFX-TEST/run_analysis.sh",
@@ -45,7 +50,7 @@
           ],
           "演示设置": [
             "演示平台：迈创",
-            "演示规模：万核",
+            "演示规模：50节点 200DSP 82400核",
             "演示应用：MISA-MD"
           ]
     }

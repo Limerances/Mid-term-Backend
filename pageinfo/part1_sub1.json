@@ -2,15 +2,20 @@
     "id" : "part1_sub1",
 
     "pool":{
-        "poolName": "pool_th_yanghailong",
+        "poolName": "pool_hg_buaa_hipo",
         "ssh":{
-            "poolName": "pool_th_yanghailong",
-            "hostname" : "192.168.10.21",
-            "username" : "yanghailong",
+            "poolName": "pool_hg_buaa_hipo",
+            "hostname" : "60.245.128.14",
+            "username" : "buaa_hipo",
             "key_filename" : "KEY_PATH",
-            "port" : 22,
+            "port" : 65010,
             "max_connections" : 5
         }
+    },
+
+    "info":{
+        "title":"海光统一采集接口",
+        "origin_id":"none"
     },
 
     "programList": {
@@ -57,7 +62,7 @@
           ],
           "演示设置": [
             "演示平台：东方",
-            "演示规模：万核",
+            "演示规模：2节点 8DCU 2112核",
             "演示应用：MISA-MD"
           ]
     }

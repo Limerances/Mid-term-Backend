@@ -13,6 +13,11 @@
         }
     },
     
+    "info":{
+        "title":"核函数计算性能自动建模",
+        "origin_id":"part4_sub2"
+    },
+
     "programList": {
             "加速器核函数计算性能自动建模":{
             "cmd": "/work1/dtune/AMT-Toolkits/tests/compute/model_test.sh",
@@ -81,7 +86,7 @@
           ],
           "演示设置": [
             "演示平台：海光",
-            "演示规模：单节点",
+            "演示规模：1节点 1DCU 288核",
             "演示应用：X-BLUE"
           ]
     }

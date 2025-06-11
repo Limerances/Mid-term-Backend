@@ -1,5 +1,5 @@
 {
-    "id" : "part1_sub3",
+    "id" : "part1_sub2",
 
     "pool":{
         "poolName": "pool_th_yanghailong",
@@ -14,20 +14,34 @@
     },
 
     "info":{
-        "title":"性能事件采样",
-        "origin_id":"part1_sub2"
+        "title":"迈创统一采集接口",
+        "origin_id":"none"
     },
 
     "programList": {
-        "性能事件采样及读取":{
-            "cmd": "/thfs3/home/yanghailong/workdir/SJCY-TEST/misa-md/mid_run.sh",
+        "Sampling 性能事件采样及读取":{
+            "cmd": "/thfs3/home/yanghailong/zzz_private/ZZCY/mid_run.sh",
             "resultList": [
                 {
-                    "name": "性能事件采集读取结果",
-                    "path": "/thfs3/home/yanghailong/workdir/SJCY-TEST/misa-md/logs/read/result.0",
-                    "backPath": "/thfs3/home/yanghailong/workdir/SJCY-TEST/misa-md/logs/result_back.0",
+                    "name": "MPI 读取结果",
+                    "path": "/thfs3/home/yanghailong/zzz_private/ZZCY/read/result_1000.0",
+                    "backPath": "/thfs3/home/yanghailong/zzz_private/ZZCY/result_1000_back.0",
                     "type": "text", 
                     "content": ""
+                },
+                {
+                  "name": "SAMPLING 读取结果",
+                  "path": "/thfs3/home/yanghailong/zzz_private/ZZCY/read/sampling_res.0",
+                  "backPath": "/thfs3/home/yanghailong/zzz_private/ZZCY/sampling_res_back.0",
+                  "type": "text", 
+                  "content": ""
+                },
+                {
+                  "name": "ACCL 读取结果",
+                  "path": "/thfs3/home/yanghailong/zzz_private/ZZCY/read/ext.0.00",
+                  "backPath": "/thfs3/home/yanghailong/zzz_private/ZZCY/ext_back.0.00",
+                  "type": "text", 
+                  "content": ""
                 }
             ]
         }
@@ -47,7 +61,7 @@
             "采集国产超算系统上应用的性能事件数据以及性能轨迹，并对性能事件数据进行读取收集"
           ],
           "演示设置": [
-            "演示平台：迈创",
+            "演示平台：天河",
             "演示规模：2节点 8DSP 3296核",
             "演示应用：MISA-MD"
           ]

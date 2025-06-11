@@ -13,6 +13,11 @@
         }
     },
 
+    "info":{
+        "title":"内存分析功能测试",
+        "origin_id":"part1_sub11"
+    },
+
     "programList": {
         "内存分析功能测试":{
             "cmd": "/thfs3/home/yanghailong/midterm-demo/workdir/NCFX/run_analysis.sh",
@@ -50,7 +55,7 @@
           ],
           "演示设置": [
             "演示平台：迈创",
-            "演示规模：万核",
+            "演示规模：8节点 32DSP 13184核",
             "演示应用：MISA-MD"
           ]
     }

@@ -13,6 +13,11 @@
         }
     },
 
+    "info":{
+        "title":"通用域性能监测接口测试",
+        "origin_id":"part3_sub1"
+    },
+
     "programList": {
         "基于PAPI的通用域性能监测接口测试":{
             "cmd": "/public/home/wangjh/rjcs/verify/re_compile_run_cpu_bash.sh",
@@ -45,8 +50,8 @@
           ],
           "演示设置": [
             "演示平台：海光",
-            "演示规模：",
-            "演示应用："
+            "演示规模：1节点 1核",
+            "演示应用：PAPI通用域接口测试程序"
           ]
     }
 }

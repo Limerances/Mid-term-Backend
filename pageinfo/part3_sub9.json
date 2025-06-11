@@ -13,6 +13,11 @@
         }
     },
 
+    "info":{
+        "title":"I/O诊断功能",
+        "origin_id":"part5_sub2"
+    },
+
     "programList": {
         "I/O诊断功能":{
             "cmd": "/public/home/wangxg/work1/niujian/ParaDiS-main/IOP2.sh",
@@ -50,7 +55,7 @@
           ],
           "演示设置": [
             "演示平台：419",
-            "演示规模：96核",
+            "演示规模：1节点 1DCU 264核",
             "演示应用：IOP"
           ]
     }

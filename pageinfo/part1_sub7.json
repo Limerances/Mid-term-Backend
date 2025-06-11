@@ -13,6 +13,11 @@
         }
     },
 
+    "info":{
+        "title":"统一接口技术功能",
+        "origin_id":"part1_sub1"
+    },
+
     "programList": {
         "统一接口技术功能":{
             "cmd": "/thfs3/home/yanghailong/midterm-demo/workdir/TYJK/run_tyjk.sh",
@@ -43,7 +48,7 @@
           ],
           "演示设置": [
             "演示平台：迈创",
-            "演示规模：万核",
+            "演示规模：8节点 32DSP 13184核",
             "演示应用：MISA-MD"
           ]
     }

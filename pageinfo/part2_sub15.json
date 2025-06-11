@@ -12,6 +12,13 @@
             "max_connections" : 5
         }
     },
+
+    "info":{
+        "title":"轻量级并行调试工具与失效定位",
+        "origin_id":"part2_sub3"
+    },
+
+
     "programList": {
         "执行大规模程序":{
             "cmd": "/thfs1/home/penglin_lxx/NPB3.4.2/NPB3.4-MPI/runwk.sh",
@@ -64,7 +71,7 @@
           ],
           "演示设置": [
             "演示平台：迈创",
-            "演示规模：万核",
+            "演示规模：8节点 32核",
             "演示应用：并行程序函数栈获取合并与可视化工具"
           ]
     }

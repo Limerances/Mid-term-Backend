@@ -13,6 +13,11 @@
         }
     },
 
+    "info":{
+        "title":"数据提取",
+        "origin_id":"none"
+    },
+
     "programList": {
         "内存分析":{
             "cmd": "/thfs3/home/yanghailong/midterm-demo/workdir/SJTQ-TEST/run_extract.sh",
@@ -43,7 +48,7 @@
           ],
           "演示设置": [
             "演示平台：迈创",
-            "演示规模：万核",
+            "演示规模：50节点 200DSP 82400核",
             "演示应用：MISA-MD"
           ]
     }
